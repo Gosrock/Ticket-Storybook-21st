@@ -17,7 +17,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,11 @@
     "@storybook/node-logger": "^6.4.13",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.13",
+    "@storybook/storybook-deployer": "^2.8.10",
+    "mini-css-extract-plugin": "2.4.5",
     "webpack": "^5.66.0"
+  },
+  "overrides": {
+    "mini-css-extract-plugin": "2.4.5"
   }
 }
