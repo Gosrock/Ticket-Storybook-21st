@@ -30,7 +30,8 @@
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
     "semantic-release": "semantic-release",
-    "commit": "cz"
+    "commit": "cz",
+    "is-build-es5": "npx es-check es5 './dist/**/*.!(esm).js'"
   },
   "eslintConfig": {
     "extends": [
