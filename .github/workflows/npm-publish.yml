@@ -1,4 +1,4 @@
-name: Example Rollup React Component NPM Package
+name: Rollup React Component NPM Package
 
 on:
   release:

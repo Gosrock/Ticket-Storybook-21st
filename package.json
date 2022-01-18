@@ -11,7 +11,8 @@
     "dist"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.16.5"
+    "@babel/runtime": "^7.16.5",
+    "husky": "^7.0.4"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -19,7 +20,6 @@
     "react-dom": "^17.0.2"
   },
   "scripts": {
-    "prepare": "husky install",
     "lint-staged": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -31,7 +31,8 @@
     "deploy-storybook": "storybook-to-ghpages",
     "semantic-release": "semantic-release",
     "commit": "cz",
-    "is-build-es5": "npx es-check es5 './dist/**/*.!(esm).js'"
+    "is-build-es5": "npx es-check es5 './dist/**/*.!(esm).js'",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
