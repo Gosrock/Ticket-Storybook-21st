@@ -27,12 +27,14 @@ function App() {
 }
 ```
 
+#
+
 ## :books: Document
 
 we are make our components in story book. So if we add some components you can find document and example of useage in storybook.
 
 check our stories
-:arrow_down::arrow_down::arrow_down:
+:arrow_right::arrow_right::arrow_right:
 [storybook url](https://gosrock.github.io/Gosrock-storybook/)
 
 ## :full_moon_with_face: How to Contribute
