@@ -1,7 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { Button } from "./stories/Button/Button.jsx";
+import { Header } from "./stories/Header/Header.jsx";
+import { Page } from "./stories/PageTest/Page.jsx";
 
-ReactDOM.render(
-  <React.StrictMode>for stories</React.StrictMode>,
-  document.getElementById("root")
-);
+export { Button, Header, Page };
