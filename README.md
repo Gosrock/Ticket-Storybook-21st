@@ -1,71 +1,101 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Gosrock-storybook
+
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=flat-square)](https://github.com/semantic-release/semantic-release) [![gosrock](https://img.shields.io/github/workflow/status/Gosrock/Gosrock-storybook/Rollup%20React%20Component%20NPM%20Package/main?style=flat-square)](https://github.com/Gosrock/Gosrock-storybook/actions/workflows/npm-publish.yml) [![gosrock](https://img.shields.io/npm/v/gosrock-storybook?color=green&style=flat-square)](https://www.npmjs.com/package/gosrock-storybook) [![gosrock](https://img.shields.io/npm/l/gosrock-storybook?style=flat-square)](https://github.com/Gosrock/Gosrock-storybook/blob/main/LICENSE)
+
+## :bulb: Getting started
+
+- add dependency
+
+```sh
+npm install gosrock-storybook
+```
+
+- how to use
+
+```jsx
+import { Header, Button } from 'gosrock-storybook';
+// need to add css file Don't forget
+import 'gosrock-storybook/dist/index.esm.css';
+
+function App() {
+  return (
+    <>
+        <Header></Header>
+        <Button primary={true} label={'asdf'}></Button>
+    <>
+  );
+}
+```
+
+## :books: Document
+
+we are make our components in story book. So if we add some components you can find document and example of useage in storybook.
+
+check our stories
+:arrow_down::arrow_down::arrow_down:
+[storybook url](https://gosrock.github.io/Gosrock-storybook/)
+
+## :full_moon_with_face: How to Contribute
+
+we are using [husky](https://github.com/typicode/husky) to add custom git hook and [commitlint](https://github.com/conventional-changelog/commitlint) to validate commit msg , prettier the code.
+
+in package.json
+
+```json
+"lint-staged": {
+    "**/*.{js,jsx,json,tsx}": [
+      "prettier --write"
+    ]
+  }
+```
+
+and see .husky pre-commit , prepare-commit-msg , commit-msg shell command
+
+and using [commitizen](https://github.com/commitizen/cz-cli) to easy commint
+
+- clone the repo (who member of @gosrcok)
+
+```sh
+npm install
+```
+
+- work around with story book
+  see source in src/stories folder
+
+- commit with [commitizen](https://github.com/commitizen/cz-cli)
+
+```sh
+ git add .
+ git commit
+```
+
+if you type `git commit` than commitizen automatically come out and choose
+![무제](https://user-images.githubusercontent.com/13329304/149973077-afe241d3-e9d7-4c9a-9864-0518dc64769c.jpg)
+
+type of change.
+
+:bangbang: we are using [semantic-release](https://github.com/semantic-release/semantic-release) to deploy npm package with github action.
+`so you need to keep angular commit message convention`
+
+see [how does it works](https://github.com/semantic-release/semantic-release/blob/master/README.md#how-does-it-work) in semantic-release document
+
+| Commit message                                                                                                                                                                                   | Release type                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | ~~Patch~~ Fix Release                                                                                           |
+| `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                       | ~~Minor~~ Feature Release                                                                                       |
+| `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | ~~Major~~ Breaking Release <br /> (Note that the `BREAKING CHANGE: ` token must be in the footer of the commit) |
+
+so event occur if push or merge event ( see .github/workflows)
+
+```yml
+on:
+  push:
+    branches:
+      - main
+```
+
+than semantic-release-action is see all commit msg to deploy automatically version upgrade.
+
+fix -> 0.0.1
+feat -> 0.1.0
+perf -> 1.0.0

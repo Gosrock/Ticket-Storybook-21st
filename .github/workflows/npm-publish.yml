@@ -1,14 +1,14 @@
 name: Rollup React Component NPM Package
 
 on:
-  release:
-    types: [published]
+  # release:
+  #   types: [published]
   push:
     branches:
       - main
-  pull_request:
-  schedule:
-    - cron: '0 12 * * *'
+  # pull_request:
+  # schedule:
+  #   - cron: '0 12 * * *'
 
 jobs:
   build:
