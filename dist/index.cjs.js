@@ -2,7 +2,6 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-require('reset.css');
 var _extends$1 = require('@babel/runtime/helpers/extends');
 var _objectWithoutProperties = require('@babel/runtime/helpers/objectWithoutProperties');
 var React = require('react');
@@ -132,8 +131,8 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-const SvgGoBackArrow = props =>
-  /*#__PURE__*/ React__namespace.createElement(
+var SvgGoBackArrow = function SvgGoBackArrow(props) {
+  return /*#__PURE__*/ React__namespace.createElement(
     'svg',
     _extends(
       {
@@ -151,6 +150,7 @@ const SvgGoBackArrow = props =>
         fill: '#fff'
       }))
   );
+};
 
 var _excluded = ['label'];
 /**

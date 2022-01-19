@@ -3,9 +3,9 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import image from '@rollup/plugin-image';
-import postcss from 'rollup-plugin-postcss';
+import replace from '@rollup/plugin-replace';
 import filesize from 'rollup-plugin-filesize';
-import autoprefixer from 'autoprefixer';
+import css from 'rollup-plugin-css-only';
 import svgr from '@svgr/rollup';
 // package.json 에 main , module 등 설정해논 경로가 있음
 import pkg from './package.json';
@@ -21,11 +21,18 @@ const GLOBALS = {
 };
 
 const PLUGINS = [
-  // css 파일 임포트 시키기  ( sass 지원아님)
-  postcss({
-    extract: true,
-    plugins: [autoprefixer]
+  replace({
+    values: {
+      "import 'reset.css';": ''
+    },
+    delimiters: ['', '']
   }),
+  css({ output: 'gosrockStyle.css' }),
+  // css 파일 임포트 시키기  ( sass 지원아님)
+  // postcss({
+  //   extract: true,
+  //   plugins: [autoprefixer]
+  // }),
   // 바벨로 es5 으로 변환.
   babel({
     babelHelpers: 'runtime',
