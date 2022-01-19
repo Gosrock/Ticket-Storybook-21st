@@ -91,9 +91,9 @@ step 4.
 
 if you want to upgrade the version than add commit message with in `["fix" , "feat" , "perf"]`
 
-include `fix` -> upgrade version 0.0.1
-include `feat` -> upgrade version 0.1.0
-include `perf` -> upgrade version 1.0.0
+- include `fix` -> upgrade version 0.0.1
+- include `feat` -> upgrade version 0.1.0
+- include `perf` -> upgrade version 1.0.0
 
 see the below meaning of the commit msg.
 

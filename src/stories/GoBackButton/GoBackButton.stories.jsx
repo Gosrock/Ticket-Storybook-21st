@@ -6,7 +6,14 @@ export default {
   title: 'Example/GoBackButton',
   component: GoBackButton,
 
-  argTypes: {}
+  argTypes: {},
+  decorators: [
+    Story => (
+      <div style={{ backgroundColor: 'black' }}>
+        <Story />
+      </div>
+    )
+  ]
 };
 
 const Template = args => <GoBackButton {...args} />;
