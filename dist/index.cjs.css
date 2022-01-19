@@ -29,6 +29,21 @@
   padding: 12px 24px;
 }
 
+.goBackButton {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  text-align: bottom;
+  text-decoration: none;
+  display: flex;
+}
+
+.goBackButton--medium {
+  font-size: 18px;
+  line-height: 22px;
+  /* padding: 11px 20px; */
+}
+
 .wrapper {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
