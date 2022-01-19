@@ -1,0 +1,14 @@
+.goBackButton {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  text-align: bottom;
+  text-decoration: none;
+  display: flex;
+}
+
+.goBackButton--medium {
+  font-size: 18px;
+  line-height: 22px;
+  /* padding: 11px 20px; */
+}

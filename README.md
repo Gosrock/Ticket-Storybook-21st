@@ -58,6 +58,8 @@ and using [commitizen](https://github.com/commitizen/cz-cli) to easy commint
 - clone the repo (who member of @gosrcok)
 
 ```sh
+npm install -g commitizen
+// you sholud install commitizen
 npm install
 ```
 
