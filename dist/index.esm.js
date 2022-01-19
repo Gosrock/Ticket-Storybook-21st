@@ -1,16 +1,22 @@
-import 'reset.css';
 import _extends$1 from '@babel/runtime/helpers/extends';
+import _objectWithoutProperties from '@babel/runtime/helpers/objectWithoutProperties';
 import * as React from 'react';
 import React__default from 'react';
 import PropTypes from 'prop-types';
 
+var _excluded$1 = ['primary', 'backgroundColor', 'size', 'label'];
 /**
  * Primary UI component for user interaction
  */
 
-const Button = _ref => {
-  let { primary, backgroundColor, size, label, ...props } = _ref;
-  const mode = primary
+var Button = function Button(_ref) {
+  var primary = _ref.primary,
+    backgroundColor = _ref.backgroundColor,
+    size = _ref.size,
+    label = _ref.label,
+    props = _objectWithoutProperties(_ref, _excluded$1);
+
+  var mode = primary
     ? 'storybook-button--primary'
     : 'storybook-button--secondary';
   return /*#__PURE__*/ React__default.createElement(
@@ -18,11 +24,13 @@ const Button = _ref => {
     _extends$1(
       {
         type: 'button',
-        className: ['storybook-button', `storybook-button--${size}`, mode].join(
-          ' '
-        ),
+        className: [
+          'storybook-button',
+          'storybook-button--'.concat(size),
+          mode
+        ].join(' '),
         style: backgroundColor && {
-          backgroundColor
+          backgroundColor: backgroundColor
         }
       },
       props
@@ -82,8 +90,8 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-const SvgGoBackArrow = props =>
-  /*#__PURE__*/ React.createElement(
+var SvgGoBackArrow = function SvgGoBackArrow(props) {
+  return /*#__PURE__*/ React.createElement(
     'svg',
     _extends(
       {
@@ -101,13 +109,17 @@ const SvgGoBackArrow = props =>
         fill: '#fff'
       }))
   );
+};
 
+var _excluded = ['label'];
 /**
  * Primary UI component for user interaction
  */
 
-const GoBackButton = _ref => {
-  let { label, ...props } = _ref;
+var GoBackButton = function GoBackButton(_ref) {
+  var label = _ref.label,
+    props = _objectWithoutProperties(_ref, _excluded);
+
   // const mode = primary
   //   ? 'storybook-button--primary'
   //   : 'storybook-button--secondary';
@@ -118,7 +130,7 @@ const GoBackButton = _ref => {
       'button',
       _extends$1(
         {
-          className: ['goBackButton', `goBackButton--medium`].join(' ')
+          className: ['goBackButton', 'goBackButton--medium'].join(' ')
         },
         props
       ),
@@ -151,8 +163,11 @@ GoBackButton.defaultProps = {
   label: '뒤로가기'
 };
 
-const Header = _ref => {
-  let { user, onLogin, onLogout, onCreateAccount } = _ref;
+var Header = function Header(_ref) {
+  var user = _ref.user,
+    onLogin = _ref.onLogin,
+    onLogout = _ref.onLogout,
+    onCreateAccount = _ref.onCreateAccount;
   return /*#__PURE__*/ React__default.createElement(
     'header',
     null,
@@ -232,8 +247,11 @@ Header.defaultProps = {
   user: null
 };
 
-const Page = _ref => {
-  let { user, onLogin, onLogout, onCreateAccount } = _ref;
+var Page = function Page(_ref) {
+  var user = _ref.user,
+    onLogin = _ref.onLogin,
+    onLogout = _ref.onLogout,
+    onCreateAccount = _ref.onCreateAccount;
   return /*#__PURE__*/ React__default.createElement(
     'article',
     null,
