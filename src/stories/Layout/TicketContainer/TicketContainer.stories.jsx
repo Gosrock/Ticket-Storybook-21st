@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { TicketWrapContainer } from '../TicketWrapContainer/TicketWrapContainer';
 import { TicketContainer } from './TicketContainer';
 import { TicketBody } from '../TicketBody/TicketBody';
 import { TicketBodyHeader } from '../TicketBodyHeader/TicketBodyHeader.jsx';
@@ -50,9 +50,9 @@ const Template = args => {
     };
   }
   return (
-    <div className="Ticket-Container-Wrap">
+    <TicketWrapContainer>
       <TicketContainer {...args} />
-    </div>
+    </TicketWrapContainer>
   );
 };
 

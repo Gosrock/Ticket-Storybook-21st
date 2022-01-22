@@ -505,4 +505,156 @@ GoFrontButton.defaultProps = {
   fontColor: 'white'
 };
 
-export { Button, GoBackButton, GoFrontButton, Header, Page };
+var TicketBody = function TicketBody(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    {
+      className: 'TicketBody'
+    },
+    children
+  );
+};
+TicketBody.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes.node
+};
+
+var TicketTop = function TicketTop(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    {
+      className: 'TicketTop'
+    },
+    children
+  );
+};
+TicketTop.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes.node
+};
+
+/**
+ * Primary UI component for user interaction
+ */
+
+var TicketWrapContainer = function TicketWrapContainer(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    {
+      className: 'Ticket-Container-Wrap'
+    },
+    children
+  );
+};
+TicketWrapContainer.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes.node
+}; // TicketContainer.defaultProps = {
+//   children: [<TicketTop />]
+// };
+
+var TicketBodyHeader = function TicketBodyHeader(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    {
+      className: 'TicketBodyHeader'
+    },
+    children
+  );
+};
+TicketBodyHeader.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes.node
+};
+
+var TicketBottom = function TicketBottom(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    {
+      className: 'TicketBottom'
+    },
+    children
+  );
+};
+TicketBottom.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes.node
+};
+
+/**
+ * Primary UI component for user interaction
+ */
+
+var TicketContainer = function TicketContainer(_ref) {
+  var children = _ref.children;
+  console.log(children);
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    {
+      className: 'Ticket-Container'
+    },
+    /*#__PURE__*/ React__default.createElement(
+      'div',
+      {
+        className: 'Ticket-Inner-Container'
+      },
+      children
+    )
+  );
+};
+TicketContainer.propTypes = {
+  /**
+   * children components need
+   */
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        type: PropTypes.oneOf([
+          TicketBody,
+          TicketBodyHeader,
+          TicketTop,
+          TicketBottom
+        ])
+      })
+    ), // array of fields
+    PropTypes.shape({
+      type: PropTypes.oneOf([
+        TicketBody,
+        TicketBodyHeader,
+        TicketTop,
+        TicketBottom
+      ])
+    }) // singular field
+  ]).isRequired
+}; // TicketContainer.defaultProps = {
+//   children: [<TicketTop />]
+// };
+
+export {
+  Button,
+  GoBackButton,
+  GoFrontButton,
+  Header,
+  Page,
+  TicketBody,
+  TicketBodyHeader,
+  TicketBottom,
+  TicketContainer,
+  TicketTop,
+  TicketWrapContainer
+};
