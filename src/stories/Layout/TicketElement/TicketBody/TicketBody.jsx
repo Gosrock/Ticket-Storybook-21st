@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './TicketBody.css';
 
-export const TicketBody = ({ children }) => {
-  return <div className="TicketBody">{children}</div>;
+export const TicketBody = ({ children, ...props }) => {
+  return (
+    <div className="TicketBody" {...props}>
+      {children}
+    </div>
+  );
 };
 
 TicketBody.propTypes = {
