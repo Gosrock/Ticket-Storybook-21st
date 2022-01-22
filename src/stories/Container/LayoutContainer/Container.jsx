@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Container.css';
+import { TypeOne } from '../Type1/TypeOne';
+import { TypeTwo } from '../Type2/TypeTwo';
+import { TypeThree } from '../Type3/TypeThree';
 
 /**
  * Primary UI component for user interaction
  */
-export const Container = ({ children, ...props }) => {
+export const Container = ({ children }) => {
   // const mode = primary
   //   ? 'storybook-button--primary'
   //   : 'storybook-button--secondary';
@@ -13,13 +16,7 @@ export const Container = ({ children, ...props }) => {
     <>
       <div className="body-wrap">
         <div className="container">
-          <div className="inner-container">
-            <div className="vertical-grid">
-              <div style={{ color: 'white' }}>grid1</div>
-              <div style={{ color: 'white' }}>grid2</div>
-              <div style={{ color: 'white' }}>grid3</div>
-            </div>
-          </div>
+          <div className="inner-container">{children}</div>
         </div>
       </div>
     </>
@@ -28,11 +25,14 @@ export const Container = ({ children, ...props }) => {
 
 Container.propTypes = {
   /**
-   * Button contents
+   * Children contents
    */
-  children: PropTypes.node
+  children: PropTypes.shape({
+    type: PropTypes.oneOf([TypeOne, TypeTwo, TypeThree])
+  }).isRequired // singular field
 };
 
-Container.defaultProps = {
+/* Container.defaultProps = {
   children: undefined
 };
+ */
