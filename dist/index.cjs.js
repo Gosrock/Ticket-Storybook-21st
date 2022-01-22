@@ -557,8 +557,154 @@ GoFrontButton.defaultProps = {
   fontColor: 'white'
 };
 
+var TicketBody = function TicketBody(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    {
+      className: 'TicketBody'
+    },
+    children
+  );
+};
+TicketBody.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes__default['default'].node
+};
+
+var TicketTop = function TicketTop(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    {
+      className: 'TicketTop'
+    },
+    children
+  );
+};
+TicketTop.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes__default['default'].node
+};
+
+/**
+ * Primary UI component for user interaction
+ */
+
+var TicketWrapContainer = function TicketWrapContainer(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    {
+      className: 'Ticket-Container-Wrap'
+    },
+    children
+  );
+};
+TicketWrapContainer.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes__default['default'].node
+}; // TicketContainer.defaultProps = {
+//   children: [<TicketTop />]
+// };
+
+var TicketBodyHeader = function TicketBodyHeader(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    {
+      className: 'TicketBodyHeader'
+    },
+    children
+  );
+};
+TicketBodyHeader.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes__default['default'].node
+};
+
+var TicketBottom = function TicketBottom(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    {
+      className: 'TicketBottom'
+    },
+    children
+  );
+};
+TicketBottom.propTypes = {
+  /**
+   * any contents to display
+   */
+  children: PropTypes__default['default'].node
+};
+
+/**
+ * Primary UI component for user interaction
+ */
+
+var TicketContainer = function TicketContainer(_ref) {
+  var children = _ref.children;
+  console.log(children);
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    {
+      className: 'Ticket-Container'
+    },
+    /*#__PURE__*/ React__default['default'].createElement(
+      'div',
+      {
+        className: 'Ticket-Inner-Container'
+      },
+      children
+    )
+  );
+};
+TicketContainer.propTypes = {
+  /**
+   * children components need
+   */
+  children: PropTypes__default['default'].oneOfType([
+    PropTypes__default['default'].arrayOf(
+      PropTypes__default['default'].shape({
+        type: PropTypes__default['default'].oneOf([
+          TicketBody,
+          TicketBodyHeader,
+          TicketTop,
+          TicketBottom
+        ])
+      })
+    ), // array of fields
+    PropTypes__default['default'].shape({
+      type: PropTypes__default['default'].oneOf([
+        TicketBody,
+        TicketBodyHeader,
+        TicketTop,
+        TicketBottom
+      ])
+    }) // singular field
+  ]).isRequired
+}; // TicketContainer.defaultProps = {
+//   children: [<TicketTop />]
+// };
+
 exports.Button = Button;
 exports.GoBackButton = GoBackButton;
 exports.GoFrontButton = GoFrontButton;
 exports.Header = Header;
 exports.Page = Page;
+exports.TicketBody = TicketBody;
+exports.TicketBodyHeader = TicketBodyHeader;
+exports.TicketBottom = TicketBottom;
+exports.TicketContainer = TicketContainer;
+exports.TicketTop = TicketTop;
+exports.TicketWrapContainer = TicketWrapContainer;
