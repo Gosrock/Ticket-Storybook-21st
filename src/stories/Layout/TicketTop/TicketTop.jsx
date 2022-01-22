@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './TicketTop.css';
+import './TicketTop.css';
 
 export const TicketTop = ({ children }) => {
-  return <div className="TicketTop">1234444</div>;
+  return <div className="TicketTop">{children}</div>;
 };
 
 TicketTop.propTypes = {

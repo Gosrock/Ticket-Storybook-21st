@@ -4,22 +4,20 @@ import { TicketBody } from '../TicketBody/TicketBody.jsx';
 import { TicketBodyHeader } from '../TicketBodyHeader/TicketBodyHeader.jsx';
 import { TicketTop } from '../TicketTop/TicketTop.jsx';
 import { TicketBottom } from '../TicketBottom/TicketBottom.jsx';
+import './TicketContainer.css';
 
-// import './TicketContainer.css';
-// import { ReactComponent as GoFrontArrow } from './GoFrontArrow.svg';
 /**
  * Primary UI component for user interaction
  */
 export const TicketContainer = ({ children }) => {
   console.log(children);
-  // const mode = primary
-  //   ? 'storybook-button--primary'
-  //   : 'storybook-button--secondary';
-  return <div>{children}</div>;
-};
 
-// const ArrayOfChildrenComponents = ;
-// const fieldType = ;
+  return (
+    <div className="Ticket-Container">
+      <div className="Ticket-Inner-Container">{children}</div>
+    </div>
+  );
+};
 
 TicketContainer.propTypes = {
   /**
@@ -48,5 +46,5 @@ TicketContainer.propTypes = {
 };
 
 // TicketContainer.defaultProps = {
-//   children: <>{/* <TicketTop></TicketTop> */}</>
+//   children: [<TicketTop />]
 // };

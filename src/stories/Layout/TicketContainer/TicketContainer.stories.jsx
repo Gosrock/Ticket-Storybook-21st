@@ -7,10 +7,20 @@ import { TicketTop } from '../TicketTop/TicketTop';
 import { TicketBottom } from '../TicketBottom/TicketBottom';
 
 const TicketElement = {
-  TicketTop: <TicketTop />,
-  TicketBodyHeader: <TicketBodyHeader />,
-  TicketBody: <TicketBody />,
-  TicketBottom: <TicketBottom />
+  TicketTop: (
+    <TicketTop>
+      <div style={{ display: 'inline' }}>TicketTop</div>
+    </TicketTop>
+  ),
+  TicketBodyHeader: (
+    <TicketBodyHeader>TicketBodyHeader 비율을 2로</TicketBodyHeader>
+  ),
+  TicketBody: (
+    <TicketBody>
+      <div style={{ width: '100%', height: '100%' }}>TicketBody 비율을 2로</div>
+    </TicketBody>
+  ),
+  TicketBottom: <TicketBottom>TicketBottom 비율을 2로</TicketBottom>
 };
 export default {
   title: 'Layout/TicketContainer',
@@ -39,7 +49,11 @@ const Template = args => {
       children: args.children.map(label => TicketElement[label])
     };
   }
-  return <TicketContainer {...args} />;
+  return (
+    <div className="Ticket-Container-Wrap">
+      <TicketContainer {...args} />
+    </div>
+  );
 };
 
 export const Default = Template.bind({});
@@ -54,9 +68,9 @@ export const Default = Template.bind({});
 //   arrowCircleBackground: false
 // };
 
-export const 입금완료 = Template.bind({});
-입금완료.args = {
-  children: <TicketBody></TicketBody>
+export const 티켓화면 = Template.bind({});
+티켓화면.args = {
+  children: ['TicketTop', 'TicketBottom', 'TicketBody']
 };
 
 // export const 휴대폰인증하러가기 = Template.bind({});

@@ -1,0 +1,6 @@
+.TicketBottom {
+  flex-grow: 2;
+  order: 1;
+  display: flex;
+  background-color: rgb(96, 20, 227);
+}
