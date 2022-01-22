@@ -1,4 +1,4 @@
-import 'reset.css';
+import './reset.css';
 
 // when you export your 작업 , jsx 확장자를 꼭 붙여야합니다. 안그럼 rollup단계에서 못알아 먹어요!
 import { Button } from './stories/Button/Button.jsx';
