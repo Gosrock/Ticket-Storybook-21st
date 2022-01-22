@@ -1,0 +1,48 @@
+.TicketContainer {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /* justify-content: center; */
+  align-items: center;
+
+  display: flex;
+  /* position: relative; */
+  /* position: relative; */
+}
+
+.TicketContainer--medium {
+  font-size: 18px;
+  line-height: 20px;
+  /* vertical-align: middle; */
+  /* padding: 11px 20px; */
+}
+
+.TicketContainer--font-white {
+  color: white;
+}
+
+.TicketContainer--font-gray {
+  color: #b6b7b8;
+}
+
+/* .TicketContainer-center {
+  position: absolute;
+  top: 50%;
+} */
+
+.TicketContainer--circle {
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  height: 32px;
+  width: 32px;
+  background: black;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  /* margin-left: 25%;
+  margin-top: 25%; */
+}
