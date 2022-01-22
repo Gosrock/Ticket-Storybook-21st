@@ -45,7 +45,7 @@ var React__default = /*#__PURE__*/ _interopDefaultLegacy(React);
 var React__namespace = /*#__PURE__*/ _interopNamespace(React);
 var PropTypes__default = /*#__PURE__*/ _interopDefaultLegacy(PropTypes);
 
-var _excluded$2 = ['primary', 'backgroundColor', 'size', 'label'];
+var _excluded$b = ['primary', 'backgroundColor', 'size', 'label'];
 /**
  * Primary UI component for user interaction
  */
@@ -55,7 +55,7 @@ var Button = function Button(_ref) {
     backgroundColor = _ref.backgroundColor,
     size = _ref.size,
     label = _ref.label,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$2);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$b);
 
   var mode = primary
     ? 'storybook-button--primary'
@@ -152,14 +152,14 @@ var SvgGoBackArrow = function SvgGoBackArrow(props) {
   );
 };
 
-var _excluded$1 = ['label'];
+var _excluded$a = ['label'];
 /**
  * Primary UI component for user interaction
  */
 
 var GoBackButton = function GoBackButton(_ref) {
   var label = _ref.label,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$1);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$a);
 
   // const mode = primary
   //   ? 'storybook-button--primary'
@@ -473,7 +473,7 @@ var SvgGoFrontArrow = function SvgGoFrontArrow(props) {
   );
 };
 
-var _excluded = ['label', 'fontColor', 'arrowColor', 'arrowCircleBackground'];
+var _excluded$9 = ['label', 'fontColor', 'arrowColor', 'arrowCircleBackground'];
 /**
  * Primary UI component for user interaction
  */
@@ -483,7 +483,7 @@ var GoFrontButton = function GoFrontButton(_ref) {
     fontColor = _ref.fontColor,
     arrowColor = _ref.arrowColor,
     arrowCircleBackground = _ref.arrowCircleBackground,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$9);
 
   // const mode = primary
   //   ? 'storybook-button--primary'
@@ -557,13 +557,19 @@ GoFrontButton.defaultProps = {
   fontColor: 'white'
 };
 
+var _excluded$8 = ['children'];
 var TicketBody = function TicketBody(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$8);
+
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
-    {
-      className: 'TicketBody'
-    },
+    _extends__default['default'](
+      {
+        className: 'TicketBody'
+      },
+      props
+    ),
     children
   );
 };
@@ -574,13 +580,19 @@ TicketBody.propTypes = {
   children: PropTypes__default['default'].node
 };
 
+var _excluded$7 = ['children'];
 var TicketTop = function TicketTop(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$7);
+
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
-    {
-      className: 'TicketTop'
-    },
+    _extends__default['default'](
+      {
+        className: 'TicketTop'
+      },
+      props
+    ),
     children
   );
 };
@@ -591,17 +603,23 @@ TicketTop.propTypes = {
   children: PropTypes__default['default'].node
 };
 
+var _excluded$6 = ['children'];
 /**
  * Primary UI component for user interaction
  */
 
 var TicketWrapContainer = function TicketWrapContainer(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$6);
+
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
-    {
-      className: 'Ticket-Container-Wrap'
-    },
+    _extends__default['default'](
+      {
+        className: 'Ticket-Container-Wrap'
+      },
+      props
+    ),
     children
   );
 };
@@ -614,13 +632,19 @@ TicketWrapContainer.propTypes = {
 //   children: [<TicketTop />]
 // };
 
+var _excluded$5 = ['children'];
 var TicketBodyHeader = function TicketBodyHeader(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$5);
+
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
-    {
-      className: 'TicketBodyHeader'
-    },
+    _extends__default['default'](
+      {
+        className: 'TicketBodyHeader'
+      },
+      props
+    ),
     children
   );
 };
@@ -631,13 +655,52 @@ TicketBodyHeader.propTypes = {
   children: PropTypes__default['default'].node
 };
 
-var TicketBottom = function TicketBottom(_ref) {
-  var children = _ref.children;
+var _excluded$4 = ['children'];
+var InfoLayout = function InfoLayout(_ref) {
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$4);
+
+  // (제목+설명) + 내용(티켓리스트)
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
-    {
-      className: 'TicketBottom'
-    },
+    _extends__default['default'](
+      {
+        className: 'vertical-grid InfoLayout'
+      },
+      props
+    ),
+    children
+  );
+};
+InfoLayout.propTypes = {
+  /**
+   * children components need
+   */
+  children: PropTypes__default['default'].oneOfType([
+    PropTypes__default['default'].arrayOf(
+      PropTypes__default['default'].shape({
+        type: PropTypes__default['default'].oneOf([
+          TicketBody,
+          TicketBodyHeader
+        ])
+      })
+    ) // array of fields
+  ]).isRequired
+};
+
+var _excluded$3 = ['children'];
+var TicketBottom = function TicketBottom(_ref) {
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$3);
+
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    _extends__default['default'](
+      {
+        className: 'TicketBottom'
+      },
+      props
+    ),
     children
   );
 };
@@ -648,28 +711,24 @@ TicketBottom.propTypes = {
   children: PropTypes__default['default'].node
 };
 
-/**
- * Primary UI component for user interaction
- */
+var _excluded$2 = ['children'];
+var ProgressLayout = function ProgressLayout(_ref) {
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$2);
 
-var TicketContainer = function TicketContainer(_ref) {
-  var children = _ref.children;
-  console.log(children);
+  // (제목+설명) + 내용(input 혹은 제목:ticketing-01, list-01) + 하단(다음으로버튼)
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
-    {
-      className: 'Ticket-Container'
-    },
-    /*#__PURE__*/ React__default['default'].createElement(
-      'div',
+    _extends__default['default'](
       {
-        className: 'Ticket-Inner-Container'
+        className: 'vertical-grid ProgressLayout'
       },
-      children
-    )
+      props
+    ),
+    children
   );
 };
-TicketContainer.propTypes = {
+ProgressLayout.propTypes = {
   /**
    * children components need
    */
@@ -679,32 +738,129 @@ TicketContainer.propTypes = {
         type: PropTypes__default['default'].oneOf([
           TicketBody,
           TicketBodyHeader,
-          TicketTop,
           TicketBottom
         ])
       })
-    ), // array of fields
+    )
+  ]).isRequired
+};
+
+var _excluded$1 = ['children'];
+var TicketLayout = function TicketLayout(_ref) {
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$1);
+
+  // 상단(뒤로가기버튼) + 티켓
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    _extends__default['default'](
+      {
+        className: 'vertical-grid TicketLayout'
+      },
+      props
+    ),
+    children
+  );
+};
+TicketLayout.propTypes = {
+  /**
+   * children components need
+   */
+  children: PropTypes__default['default'].oneOfType([
+    PropTypes__default['default'].shape({
+      type: PropTypes__default['default'].oneOf([TicketBody])
+    })
+  ]).isRequired
+};
+
+var _excluded = ['TopElement', 'children'];
+/**
+ * Primary UI component for user interaction
+ */
+
+var TicketContainer = function TicketContainer(_ref) {
+  var TopElement = _ref.TopElement,
+    children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded);
+
+  console.log(children);
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    _extends__default['default'](
+      {
+        className: 'Ticket-Container'
+      },
+      props
+    ),
+    /*#__PURE__*/ React__default['default'].createElement(
+      'div',
+      {
+        className: 'Ticket-Inner-Container'
+      },
+      /*#__PURE__*/ React__default['default'].createElement(
+        'div',
+        {
+          className: 'Ticket-Inner-Top'
+        },
+        TopElement
+          ? TopElement
+          : /*#__PURE__*/ React__default['default'].createElement(
+              TopElement,
+              null
+            )
+      ),
+      /*#__PURE__*/ React__default['default'].createElement(
+        'div',
+        {
+          className: 'Ticket-Inner-Content'
+        },
+        children
+      )
+    )
+  );
+};
+TicketContainer.propTypes = {
+  /**
+   * children components need
+   */
+  children: PropTypes__default['default'].oneOfType([
+    // PropTypes.arrayOf(
+    //   PropTypes.shape({
+    //     type: PropTypes.oneOf([TicketLayout, ProgressLayout, InfoLayout])
+    //   })
+    // ), // array of fields
     PropTypes__default['default'].shape({
       type: PropTypes__default['default'].oneOf([
-        TicketBody,
-        TicketBodyHeader,
-        TicketTop,
-        TicketBottom
+        TicketLayout,
+        ProgressLayout,
+        InfoLayout
       ])
-    }) // singular field
-  ]).isRequired
-}; // TicketContainer.defaultProps = {
-//   children: [<TicketTop />]
-// };
+    })
+  ]).isRequired,
+  TopElement: PropTypes__default['default'].oneOfType([
+    PropTypes__default['default'].shape({
+      type: TicketTop
+    })
+  ])
+};
+TicketContainer.defaultProps = {
+  TopElement: /*#__PURE__*/ React__default['default'].createElement(
+    TicketTop,
+    null
+  )
+};
 
 exports.Button = Button;
 exports.GoBackButton = GoBackButton;
 exports.GoFrontButton = GoFrontButton;
 exports.Header = Header;
+exports.InfoLayout = InfoLayout;
 exports.Page = Page;
+exports.ProgressLayout = ProgressLayout;
 exports.TicketBody = TicketBody;
 exports.TicketBodyHeader = TicketBodyHeader;
 exports.TicketBottom = TicketBottom;
 exports.TicketContainer = TicketContainer;
+exports.TicketLayout = TicketLayout;
 exports.TicketTop = TicketTop;
 exports.TicketWrapContainer = TicketWrapContainer;

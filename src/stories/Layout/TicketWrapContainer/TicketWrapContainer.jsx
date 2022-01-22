@@ -5,8 +5,12 @@ import './TicketWrapContainer.css';
 /**
  * Primary UI component for user interaction
  */
-export const TicketWrapContainer = ({ children }) => {
-  return <div className="Ticket-Container-Wrap">{children}</div>;
+export const TicketWrapContainer = ({ children, ...props }) => {
+  return (
+    <div className="Ticket-Container-Wrap" {...props}>
+      {children}
+    </div>
+  );
 };
 TicketWrapContainer.propTypes = {
   /**

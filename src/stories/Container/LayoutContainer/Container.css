@@ -36,9 +36,3 @@ body {
     margin: 40px;
   }
 }
-
-.vertical-grid {
-  height: 600px;
-  display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
-}

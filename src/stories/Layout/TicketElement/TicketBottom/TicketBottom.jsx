@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './TicketBottom.css';
 
-export const TicketBottom = ({ children }) => {
-  return <div className="TicketBottom">{children}</div>;
+export const TicketBottom = ({ children, ...props }) => {
+  return (
+    <div className="TicketBottom" {...props}>
+      {children}
+    </div>
+  );
 };
 
 TicketBottom.propTypes = {
