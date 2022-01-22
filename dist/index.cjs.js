@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var _extends$1 = require('@babel/runtime/helpers/extends');
+var _extends$2 = require('@babel/runtime/helpers/extends');
 var _objectWithoutProperties = require('@babel/runtime/helpers/objectWithoutProperties');
 var React = require('react');
 var PropTypes = require('prop-types');
@@ -37,7 +37,7 @@ function _interopNamespace(e) {
   return Object.freeze(n);
 }
 
-var _extends__default = /*#__PURE__*/ _interopDefaultLegacy(_extends$1);
+var _extends__default = /*#__PURE__*/ _interopDefaultLegacy(_extends$2);
 var _objectWithoutProperties__default = /*#__PURE__*/ _interopDefaultLegacy(
   _objectWithoutProperties
 );
@@ -45,7 +45,7 @@ var React__default = /*#__PURE__*/ _interopDefaultLegacy(React);
 var React__namespace = /*#__PURE__*/ _interopNamespace(React);
 var PropTypes__default = /*#__PURE__*/ _interopDefaultLegacy(PropTypes);
 
-var _excluded$1 = ['primary', 'backgroundColor', 'size', 'label'];
+var _excluded$2 = ['primary', 'backgroundColor', 'size', 'label'];
 /**
  * Primary UI component for user interaction
  */
@@ -55,7 +55,7 @@ var Button = function Button(_ref) {
     backgroundColor = _ref.backgroundColor,
     size = _ref.size,
     label = _ref.label,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$1);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$2);
 
   var mode = primary
     ? 'storybook-button--primary'
@@ -112,10 +112,10 @@ Button.defaultProps = {
   onClick: undefined
 };
 
-var _path;
+var _path$1;
 
-function _extends() {
-  _extends =
+function _extends$1() {
+  _extends$1 =
     Object.assign ||
     function (target) {
       for (var i = 1; i < arguments.length; i++) {
@@ -128,13 +128,13 @@ function _extends() {
       }
       return target;
     };
-  return _extends.apply(this, arguments);
+  return _extends$1.apply(this, arguments);
 }
 
 var SvgGoBackArrow = function SvgGoBackArrow(props) {
   return /*#__PURE__*/ React__namespace.createElement(
     'svg',
-    _extends(
+    _extends$1(
       {
         width: '1em',
         height: '1em',
@@ -144,22 +144,22 @@ var SvgGoBackArrow = function SvgGoBackArrow(props) {
       },
       props
     ),
-    _path ||
-      (_path = /*#__PURE__*/ React__namespace.createElement('path', {
+    _path$1 ||
+      (_path$1 = /*#__PURE__*/ React__namespace.createElement('path', {
         d: 'm4.77 10.382 11.07-8.645a.196.196 0 0 1 .316.154V3.79c0 .12-.056.236-.15.31L7.167 11l8.84 6.902a.39.39 0 0 1 .15.309v1.898a.196.196 0 0 1-.318.155L4.771 11.619a.785.785 0 0 1 0-1.237Z',
         fill: '#fff'
       }))
   );
 };
 
-var _excluded = ['label'];
+var _excluded$1 = ['label'];
 /**
  * Primary UI component for user interaction
  */
 
 var GoBackButton = function GoBackButton(_ref) {
   var label = _ref.label,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$1);
 
   // const mode = primary
   //   ? 'storybook-button--primary'
@@ -434,7 +434,131 @@ Page.defaultProps = {
   user: null
 };
 
+var _path;
+
+function _extends() {
+  _extends =
+    Object.assign ||
+    function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+  return _extends.apply(this, arguments);
+}
+
+var SvgGoFrontArrow = function SvgGoFrontArrow(props) {
+  return /*#__PURE__*/ React__namespace.createElement(
+    'svg',
+    _extends(
+      {
+        width: '1em',
+        height: '1em',
+        viewBox: '0 0 20 20',
+        fill: 'none',
+        xmlns: 'http://www.w3.org/2000/svg'
+      },
+      props
+    ),
+    _path ||
+      (_path = /*#__PURE__*/ React__namespace.createElement('path', {
+        d: 'M15.663 9.438 5.6 1.578a.178.178 0 0 0-.287.141v1.726c0 .11.05.214.136.281L13.484 10 5.45 16.276a.354.354 0 0 0-.136.281v1.726c0 .15.171.232.287.14l10.063-7.859a.711.711 0 0 0 0-1.125Z'
+      }))
+  );
+};
+
+var _excluded = ['label', 'fontColor', 'arrowColor', 'arrowCircleBackground'];
+/**
+ * Primary UI component for user interaction
+ */
+
+var GoFrontButton = function GoFrontButton(_ref) {
+  var label = _ref.label,
+    fontColor = _ref.fontColor,
+    arrowColor = _ref.arrowColor,
+    arrowCircleBackground = _ref.arrowCircleBackground,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded);
+
+  // const mode = primary
+  //   ? 'storybook-button--primary'
+  //   : 'storybook-button--secondary';
+  return /*#__PURE__*/ React__default['default'].createElement(
+    React__default['default'].Fragment,
+    null,
+    /*#__PURE__*/ React__default['default'].createElement(
+      'button',
+      _extends__default['default'](
+        {
+          className: [
+            'GoFrontButton',
+            'GoFrontButton--medium',
+            'GoFrontButton--font-'.concat(fontColor)
+          ].join(' ')
+        },
+        props
+      ),
+      /*#__PURE__*/ React__default['default'].createElement(
+        'span',
+        null,
+        label
+      ),
+      /*#__PURE__*/ React__default['default'].createElement(
+        'div',
+        {
+          style: {
+            marginLeft: '11px'
+          },
+          className: arrowCircleBackground ? 'GoFrontButton--circle' : ''
+        },
+        /*#__PURE__*/ React__default['default'].createElement(SvgGoFrontArrow, {
+          fill: arrowColor === 'gray' ? '#b6b7b8' : arrowColor
+        })
+      )
+    )
+  );
+};
+GoFrontButton.propTypes = {
+  /**
+   * Button contents
+   */
+  label: PropTypes__default['default'].string.isRequired,
+
+  /**
+   * Optional click handler
+   */
+  onClick: PropTypes__default['default'].func,
+
+  /**
+   * 폰트의 컬러를 변경할수 있습니다. 기본은 white 입니다,
+   */
+  fontColor: PropTypes__default['default'].oneOf(['white', 'gray']),
+
+  /**
+   * 화살표의 색을 변경할수 있습니다. 기본은 white 입니다,
+   */
+  arrowColor: PropTypes__default['default'].oneOf(['white', 'yellow', 'gray']),
+
+  /**
+   * 화살표 배경에 원을 지정할 수 있습니다. 기본은 true 입니다,
+   */
+  arrowCircleBackground: PropTypes__default['default'].bool
+};
+GoFrontButton.defaultProps = {
+  onClick: undefined,
+  label: 'label을 입력해 주세요.',
+  arrowColor: 'white',
+  arrowCircleBackground: true,
+  fontColor: 'white'
+};
+
 exports.Button = Button;
 exports.GoBackButton = GoBackButton;
+exports.GoFrontButton = GoFrontButton;
 exports.Header = Header;
 exports.Page = Page;
