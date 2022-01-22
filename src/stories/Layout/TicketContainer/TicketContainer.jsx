@@ -11,6 +11,7 @@ import { TicketBottom } from '../TicketBottom/TicketBottom.jsx';
  * Primary UI component for user interaction
  */
 export const TicketContainer = ({ children }) => {
+  console.log(children);
   // const mode = primary
   //   ? 'storybook-button--primary'
   //   : 'storybook-button--secondary';

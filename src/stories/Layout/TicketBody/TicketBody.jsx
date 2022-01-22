@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // import './TicketBody.css';
 
 export const TicketBody = ({ children }) => {
-  return <div>2222</div>;
+  return <div className="TicketBody">2222</div>;
 };
 
 TicketBody.propTypes = {
