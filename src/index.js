@@ -6,5 +6,5 @@ import { GoBackButton } from './stories/GoBackButton/GoBackButton.jsx';
 import { Header } from './stories/Header/Header.jsx';
 import { Page } from './stories/PageTest/Page.jsx';
 import { GoFrontButton } from './stories/GoFrontButton/GoFrontButton.jsx';
-
-export { Button, Header, Page, GoBackButton, GoFrontButton };
+import { Container } from './stories/Container/Container';
+export { Button, Header, Page, GoBackButton, GoFrontButton, Container };
