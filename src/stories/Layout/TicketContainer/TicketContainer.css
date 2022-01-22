@@ -1,0 +1,51 @@
+/* body {
+  background-color: #040404;
+} */
+.Ticket-Container-Wrap {
+  /* veiwport fit */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Ticket-Container {
+  height: 90%;
+  /* min-height: 560px; */
+  max-height: 800px;
+  width: 90%;
+  /* min-width: 320px; */
+  max-width: 600px;
+  background-color: #121212;
+  /* margin: 0 auto; */
+  /* border-radius: 15px; */
+}
+
+.Ticket-Inner-Container {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 5% 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* @media screen and (min-width: 480px) {
+  .Ticket-Container {
+    min-width: 375px;
+    border-radius: 15px;
+    height: 90%;
+    margin: 0 200px;
+  }
+}
+@media screen and (min-width: 774px) {
+  .Ticket-Inner-Container {
+    margin: 40px;
+  }
+} */
+
+/* .vertical-grid {
+  height: 600px;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+} */
