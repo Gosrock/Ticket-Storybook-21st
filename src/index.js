@@ -1,3 +1,4 @@
+// 브라우저 기본 세팅 css 없애고 , 폰트 설정.
 import './reset.css';
 
 // when you export your 작업 , jsx 확장자를 꼭 붙여야합니다. 안그럼 rollup단계에서 못알아 먹어요!
@@ -13,6 +14,7 @@ import { InfoLayout } from './stories/Layout/TicketLayout/InfoLayout/InfoLayout.
 import { ProgressLayout } from './stories/Layout/TicketLayout/ProgressLayout/ProgressLayout.jsx';
 import { TicketLayout } from './stories/Layout/TicketLayout/TicketLayout/TicketLayout.jsx';
 
+// export
 export {
   GoBackButton,
   GoFrontButton,
