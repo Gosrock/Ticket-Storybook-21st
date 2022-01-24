@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from './Container';
-import { TypeOne } from '../Type1/TypeOne';
-import { TypeTwo } from '../Type2/TypeTwo';
-import { TypeThree } from '../Type3/TypeThree';
+import { TypeOne } from '../Container/Type1/TypeOne';
+import { TypeTwo } from '../Container/Type2/TypeTwo';
+import { TypeThree } from '../Container/Type3/TypeThree';
 
 const LayoutType = {
   typeOne: <TypeOne />,
@@ -11,7 +11,7 @@ const LayoutType = {
 };
 
 export default {
-  title: 'Container/Container',
+  title: 'Example/Container',
   component: Container,
 
   argTypes: {

@@ -3,7 +3,7 @@ import React from 'react';
 import { GoBackButton } from './GoBackButton';
 
 export default {
-  title: 'Example/GoBackButton',
+  title: 'Components/GoBackButton',
   component: GoBackButton,
 
   argTypes: {},

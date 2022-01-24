@@ -5,7 +5,7 @@ import { TicketBottom } from '../../TicketElement/TicketBottom/TicketBottom.jsx'
 import { ProgressLayout } from './ProgressLayout.jsx';
 
 export default {
-  title: 'Layout/ProgressLayout',
+  title: 'Layout/Layout/ProgressLayout',
   component: ProgressLayout,
   argTypes: {}
 };

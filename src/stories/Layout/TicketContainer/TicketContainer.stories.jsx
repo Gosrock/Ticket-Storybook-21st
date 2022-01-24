@@ -36,6 +36,12 @@ const TicketElement = {
 export default {
   title: 'Layout/TicketContainer',
   component: TicketContainer,
+  subcomponents: {
+    TicketWrapContainer,
+    InfoLayout,
+    ProgressLayout,
+    TicketLayout
+  },
   argTypes: {
     TopElement: {
       control: false
@@ -70,4 +76,37 @@ Default.args = {
       asdf
     </TicketTop>
   )
+};
+
+export const InfoLayout_제목_컨텐츠 = Template.bind({});
+InfoLayout_제목_컨텐츠.args = {
+  TopElement: (
+    <TicketTop style={{ height: '100%', backgroundColor: 'red' }}>
+      asdf
+    </TicketTop>
+  ),
+
+  children: TicketElement['InfoLayout']
+};
+
+export const ProgressLayout_제목_컨텐츠_다음버튼 = Template.bind({});
+ProgressLayout_제목_컨텐츠_다음버튼.args = {
+  TopElement: (
+    <TicketTop style={{ height: '100%', backgroundColor: 'red' }}>
+      asdf
+    </TicketTop>
+  ),
+
+  children: TicketElement['ProgressLayout']
+};
+
+export const TicketLayout_컨텐츠_티켓 = Template.bind({});
+TicketLayout_컨텐츠_티켓.args = {
+  TopElement: (
+    <TicketTop style={{ height: '100%', backgroundColor: 'red' }}>
+      asdf
+    </TicketTop>
+  ),
+
+  children: TicketElement['TicketLayout']
 };

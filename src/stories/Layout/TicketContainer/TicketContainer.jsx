@@ -7,7 +7,11 @@ import { TicketLayout } from '../TicketLayout/TicketLayout/TicketLayout.jsx';
 import './TicketContainer.css';
 
 /**
- * Primary UI component for user interaction
+ * 티켓 발급,인증 과정에서 TicketWarpContainer의 자식 컴포넌트로 들어갑니다
+ * 상단 뒤로가기버튼 영역과 , 그 영역을 제외한 나머지 영역으로 나뉘어져 있습니다
+ * grid : 1fr 7fr 입니다.
+ * TopElemnt prop으로 TicketTop 컴포넌트를 받으며
+ * children으로 TicketLayout, ProgressLayout, InfoLayout 중 하나의 레이아웃을 자식으로 받습니다.
  */
 export const TicketContainer = ({ TopElement, children, ...props }) => {
   console.log(children);
@@ -26,7 +30,7 @@ export const TicketContainer = ({ TopElement, children, ...props }) => {
 
 TicketContainer.propTypes = {
   /**
-   * children components need
+   * TicketLayout, ProgressLayout, InfoLayout 중 하나의 레이아웃을 인자로 받습니다.
    */
   children: PropTypes.oneOfType([
     // PropTypes.arrayOf(
@@ -38,7 +42,9 @@ TicketContainer.propTypes = {
       type: PropTypes.oneOf([TicketLayout, ProgressLayout, InfoLayout])
     })
   ]).isRequired,
-
+  /**
+   * TicketTop 컴포넌트를 인자로 받습니다.
+   */
   TopElement: PropTypes.oneOfType([
     PropTypes.shape({
       type: TicketTop
