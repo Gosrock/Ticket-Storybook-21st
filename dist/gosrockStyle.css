@@ -1,3 +1,249 @@
+html,
+button,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Noto Sans KR';
+  font-weight: 400;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf)
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf)
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf)
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf)
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf)
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf)
+      format('opentype');
+}
+.GoFrontButton {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /* justify-content: center; */
+  align-items: center;
+
+  display: flex;
+  /* position: relative; */
+  /* position: relative; */
+}
+
+.GoFrontButton--medium {
+  font-size: 18px;
+  line-height: 20px;
+  /* vertical-align: middle; */
+  /* padding: 11px 20px; */
+}
+
+.GoFrontButton--font-white {
+  color: white;
+}
+
+.GoFrontButton--font-gray {
+  color: #b6b7b8;
+}
+
+/* .GoFrontButton-center {
+  position: absolute;
+  top: 50%;
+} */
+
+.GoFrontButton--circle {
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  height: 32px;
+  width: 32px;
+  background: black;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  /* margin-left: 25%;
+  margin-top: 25%; */
+}
 .goBackButton {
   background-color: transparent; /* Green */
   border: none;
@@ -12,128 +258,80 @@
   line-height: 22px;
   /* padding: 11px 20px; */
 }
-.wrapper {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-svg {
-  display: inline-block;
-  vertical-align: top;
-}
-
-h1 {
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 1;
-  margin: 6px 0 6px 10px;
-  display: inline-block;
-  vertical-align: top;
-}
-
-button + button {
-  margin-left: 10px;
-}
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-}
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-.storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
-}
-.storybook-button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
-}
-section {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  padding: 48px 20px;
-  margin: 0 auto;
+.Ticket-Container {
+  height: 100%;
+  max-height: 800px;
+  width: 100%;
   max-width: 600px;
-  color: #333;
+  background-color: #121212;
+  /* border-radius: 15px; */
 }
 
-section h2 {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 1;
-  margin: 0 0 4px;
-  display: inline-block;
-  vertical-align: top;
+.Ticket-Inner-Container {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 5% 5%;
+  display: grid;
+  grid-template-rows: 1fr 7fr;
 }
 
-section p {
-  margin: 1em 0;
+/* @media screen and (min-width: 480px) {
+  .Ticket-Container {
+    min-width: 375px;
+    border-radius: 15px;
+    height: 90%;
+    margin: 0 200px;
+  }
 }
+@media screen and (min-width: 774px) {
+  .Ticket-Inner-Container {
+    margin: 40px;
+  }
+} */
 
-section a {
-  text-decoration: none;
-  color: #1ea7fd;
+/* .vertical-grid {
+  height: 600px;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
 }
-
-section ul {
-  padding-left: 30px;
-  margin: 1em 0;
+*/
+.Ticket-Container-Wrap {
+  /* veiwport fit */
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.TicketBody {
+  order: 5;
 
-section li {
-  margin-bottom: 8px;
+  display: flex;
 }
-
-section .tip {
-  display: inline-block;
-  border-radius: 1em;
-  font-size: 11px;
-  line-height: 12px;
-  font-weight: 700;
-  background: #e7fdd8;
-  color: #66bf3c;
-  padding: 4px 12px;
-  margin-right: 10px;
-  vertical-align: top;
+.TicketBodyHeader {
+  order: 0;
+  display: flex;
 }
-
-section .tip-wrapper {
-  font-size: 13px;
-  line-height: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+.TicketBottom {
+  order: 10;
+  display: flex;
 }
-
-section .tip-wrapper svg {
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  margin-right: 4px;
-  vertical-align: top;
-  margin-top: 3px;
+.TicketTop {
+  order: -10;
+  display: flex;
 }
-
-section .tip-wrapper svg path {
-  fill: #1ea7fd;
+.InfoLayout {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 4fr;
+}
+.ProgressLayout {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 3fr 1fr;
+}
+.TicketLayout {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7fr;
 }

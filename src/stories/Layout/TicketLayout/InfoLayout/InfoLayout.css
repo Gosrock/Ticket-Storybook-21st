@@ -1,0 +1,5 @@
+.InfoLayout {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 4fr;
+}
