@@ -196,54 +196,6 @@ table {
     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf)
       format('opentype');
 }
-.GoFrontButton {
-  background-color: transparent; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  /* justify-content: center; */
-  align-items: center;
-
-  display: flex;
-  /* position: relative; */
-  /* position: relative; */
-}
-
-.GoFrontButton--medium {
-  font-size: 18px;
-  line-height: 20px;
-  /* vertical-align: middle; */
-  /* padding: 11px 20px; */
-}
-
-.GoFrontButton--font-white {
-  color: white;
-}
-
-.GoFrontButton--font-gray {
-  color: #b6b7b8;
-}
-
-/* .GoFrontButton-center {
-  position: absolute;
-  top: 50%;
-} */
-
-.GoFrontButton--circle {
-  justify-content: center;
-  align-items: center;
-
-  display: flex;
-  height: 32px;
-  width: 32px;
-  background: black;
-  border-radius: 16px;
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px;
-  /* margin-left: 25%;
-  margin-top: 25%; */
-}
 .goBackButton {
   background-color: transparent; /* Green */
   border: none;
@@ -295,6 +247,54 @@ table {
   grid-template-rows: 1fr 4fr 1fr;
 }
 */
+.GoFrontButton {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /* justify-content: center; */
+  align-items: center;
+
+  display: flex;
+  /* position: relative; */
+  /* position: relative; */
+}
+
+.GoFrontButton--medium {
+  font-size: 18px;
+  line-height: 20px;
+  /* vertical-align: middle; */
+  /* padding: 11px 20px; */
+}
+
+.GoFrontButton--font-white {
+  color: white;
+}
+
+.GoFrontButton--font-gray {
+  color: #b6b7b8;
+}
+
+/* .GoFrontButton-center {
+  position: absolute;
+  top: 50%;
+} */
+
+.GoFrontButton--circle {
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  height: 32px;
+  width: 32px;
+  background: black;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  /* margin-left: 25%;
+  margin-top: 25%; */
+}
 .Ticket-Container-Wrap {
   /* veiwport fit */
   width: 100vw;
@@ -308,10 +308,6 @@ table {
 
   display: flex;
 }
-.TicketBodyHeader {
-  order: 0;
-  display: flex;
-}
 .TicketBottom {
   order: 10;
   display: flex;
@@ -320,15 +316,19 @@ table {
   order: -10;
   display: flex;
 }
-.InfoLayout {
-  height: 100%;
-  display: grid;
-  grid-template-rows: 3fr 4fr;
+.TicketBodyHeader {
+  order: 0;
+  display: flex;
 }
 .ProgressLayout {
   height: 100%;
   display: grid;
   grid-template-rows: 3fr 3fr 1fr;
+}
+.InfoLayout {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 4fr;
 }
 .TicketLayout {
   height: 100%;
