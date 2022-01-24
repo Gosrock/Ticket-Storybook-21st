@@ -3,7 +3,7 @@ import React from 'react';
 import { GoFrontButton } from './GoFrontButton';
 
 export default {
-  title: 'Example/GoFrontButton',
+  title: 'Components/GoFrontButton',
   component: GoFrontButton,
 
   argTypes: {}

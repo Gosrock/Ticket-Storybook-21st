@@ -4,7 +4,7 @@ import './GoFrontButton.css';
 import { ReactComponent as GoFrontArrow } from './GoFrontArrow.svg';
 
 /**
- * Primary UI component for user interaction
+ * 다음으로 버튼
  */
 export const GoFrontButton = ({
   label,
@@ -40,11 +40,11 @@ export const GoFrontButton = ({
 
 GoFrontButton.propTypes = {
   /**
-   * Button contents
+   * 라벨 , 안의 텍스트를 변경할 수 있습니다.
    */
   label: PropTypes.string.isRequired,
   /**
-   * Optional click handler
+   * 클릭 이벤트 콜백 함수
    */
   onClick: PropTypes.func,
   /**
