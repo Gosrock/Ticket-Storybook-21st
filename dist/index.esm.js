@@ -497,7 +497,7 @@ TicketContainer.propTypes = {
    */
   TopElement: PropTypes.oneOfType([
     PropTypes.shape({
-      type: TicketTop
+      type: PropTypes.oneOf([TicketTop])
     })
   ])
 };
@@ -537,10 +537,23 @@ TicketWrapContainer.propTypes = {
   ]).isRequired
 };
 
+var JaetakButton = function JaetakButton(_ref) {
+  var label = _ref.label,
+    size = _ref.size;
+  return /*#__PURE__*/ React__default.createElement(
+    'button',
+    null,
+    ' ',
+    label,
+    size
+  );
+};
+
 export {
   GoBackButton,
   GoFrontButton,
   InfoLayout,
+  JaetakButton,
   ProgressLayout,
   TicketBody,
   TicketBodyHeader,

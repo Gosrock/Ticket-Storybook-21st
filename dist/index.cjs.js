@@ -559,7 +559,7 @@ TicketContainer.propTypes = {
    */
   TopElement: PropTypes__default['default'].oneOfType([
     PropTypes__default['default'].shape({
-      type: TicketTop
+      type: PropTypes__default['default'].oneOf([TicketTop])
     })
   ])
 };
@@ -602,9 +602,22 @@ TicketWrapContainer.propTypes = {
   ]).isRequired
 };
 
+var JaetakButton = function JaetakButton(_ref) {
+  var label = _ref.label,
+    size = _ref.size;
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'button',
+    null,
+    ' ',
+    label,
+    size
+  );
+};
+
 exports.GoBackButton = GoBackButton;
 exports.GoFrontButton = GoFrontButton;
 exports.InfoLayout = InfoLayout;
+exports.JaetakButton = JaetakButton;
 exports.ProgressLayout = ProgressLayout;
 exports.TicketBody = TicketBody;
 exports.TicketBodyHeader = TicketBodyHeader;
