@@ -23,6 +23,11 @@ Primary.args = {
   size: 'asdf'
 };
 
+export const 기여미주안 = Template.bind({});
+기여미주안.args = {
+  label: '주아니기여워버튼'
+};
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: '버튼'
