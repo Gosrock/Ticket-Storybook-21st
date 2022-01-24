@@ -47,7 +47,7 @@ TicketContainer.propTypes = {
    */
   TopElement: PropTypes.oneOfType([
     PropTypes.shape({
-      type: TicketTop
+      type: PropTypes.oneOf([TicketTop])
     })
   ])
 };
