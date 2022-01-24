@@ -41,76 +41,9 @@ var _extends__default = /*#__PURE__*/ _interopDefaultLegacy(_extends$2);
 var _objectWithoutProperties__default = /*#__PURE__*/ _interopDefaultLegacy(
   _objectWithoutProperties
 );
-var React__default = /*#__PURE__*/ _interopDefaultLegacy(React);
 var React__namespace = /*#__PURE__*/ _interopNamespace(React);
+var React__default = /*#__PURE__*/ _interopDefaultLegacy(React);
 var PropTypes__default = /*#__PURE__*/ _interopDefaultLegacy(PropTypes);
-
-var _excluded$b = ['primary', 'backgroundColor', 'size', 'label'];
-/**
- * Primary UI component for user interaction
- */
-
-var Button = function Button(_ref) {
-  var primary = _ref.primary,
-    backgroundColor = _ref.backgroundColor,
-    size = _ref.size,
-    label = _ref.label,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$b);
-
-  var mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
-  return /*#__PURE__*/ React__default['default'].createElement(
-    'button',
-    _extends__default['default'](
-      {
-        type: 'button',
-        className: [
-          'storybook-button',
-          'storybook-button--'.concat(size),
-          mode
-        ].join(' '),
-        style: backgroundColor && {
-          backgroundColor: backgroundColor
-        }
-      },
-      props
-    ),
-    label
-  );
-};
-Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes__default['default'].bool,
-
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes__default['default'].string,
-
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes__default['default'].oneOf(['small', 'medium', 'large']),
-
-  /**
-   * Button contents
-   */
-  label: PropTypes__default['default'].string.isRequired,
-
-  /**
-   * Optional click handler
-   */
-  onClick: PropTypes__default['default'].func
-};
-Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
-  onClick: undefined
-};
 
 var _path$1;
 
@@ -154,7 +87,7 @@ var SvgGoBackArrow = function SvgGoBackArrow(props) {
 
 var _excluded$a = ['label'];
 /**
- * Primary UI component for user interaction
+ * 뒤로가기 버튼
  */
 
 var GoBackButton = function GoBackButton(_ref) {
@@ -193,245 +126,18 @@ var GoBackButton = function GoBackButton(_ref) {
 };
 GoBackButton.propTypes = {
   /**
-   * Button contents
+   * 라벨 , 안의 텍스트를 변경할 수 있습니다.
    */
   label: PropTypes__default['default'].string.isRequired,
 
   /**
-   * Optional click handler
+   * 클릭 이벤트 콜백 함수
    */
   onClick: PropTypes__default['default'].func
 };
 GoBackButton.defaultProps = {
   onClick: undefined,
   label: '뒤로가기'
-};
-
-var Header = function Header(_ref) {
-  var user = _ref.user,
-    onLogin = _ref.onLogin,
-    onLogout = _ref.onLogout,
-    onCreateAccount = _ref.onCreateAccount;
-  return /*#__PURE__*/ React__default['default'].createElement(
-    'header',
-    null,
-    /*#__PURE__*/ React__default['default'].createElement(
-      'div',
-      {
-        className: 'wrapper'
-      },
-      /*#__PURE__*/ React__default['default'].createElement(
-        'div',
-        null,
-        /*#__PURE__*/ React__default['default'].createElement(
-          'svg',
-          {
-            width: '32',
-            height: '32',
-            viewBox: '0 0 32 32',
-            xmlns: 'http://www.w3.org/2000/svg'
-          },
-          /*#__PURE__*/ React__default['default'].createElement(
-            'g',
-            {
-              fill: 'none',
-              fillRule: 'evenodd'
-            },
-            /*#__PURE__*/ React__default['default'].createElement('path', {
-              d: 'M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z',
-              fill: '#FFF'
-            }),
-            /*#__PURE__*/ React__default['default'].createElement('path', {
-              d: 'M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z',
-              fill: '#555AB9'
-            }),
-            /*#__PURE__*/ React__default['default'].createElement('path', {
-              d: 'M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z',
-              fill: '#91BAF8'
-            })
-          )
-        ),
-        /*#__PURE__*/ React__default['default'].createElement(
-          'h1',
-          null,
-          'Acme'
-        )
-      ),
-      /*#__PURE__*/ React__default['default'].createElement(
-        'div',
-        null,
-        user
-          ? /*#__PURE__*/ React__default['default'].createElement(Button, {
-              size: 'small',
-              onClick: onLogout,
-              label: 'Log out'
-            })
-          : /*#__PURE__*/ React__default['default'].createElement(
-              React__default['default'].Fragment,
-              null,
-              /*#__PURE__*/ React__default['default'].createElement(Button, {
-                size: 'small',
-                onClick: onLogin,
-                label: 'Log in'
-              }),
-              /*#__PURE__*/ React__default['default'].createElement(Button, {
-                primary: true,
-                size: 'small',
-                onClick: onCreateAccount,
-                label: 'Sign up'
-              })
-            )
-      )
-    )
-  );
-};
-Header.propTypes = {
-  user: PropTypes__default['default'].shape({}),
-  onLogin: PropTypes__default['default'].func.isRequired,
-  onLogout: PropTypes__default['default'].func.isRequired,
-  onCreateAccount: PropTypes__default['default'].func.isRequired
-};
-Header.defaultProps = {
-  user: null
-};
-
-var Page = function Page(_ref) {
-  var user = _ref.user,
-    onLogin = _ref.onLogin,
-    onLogout = _ref.onLogout,
-    onCreateAccount = _ref.onCreateAccount;
-  return /*#__PURE__*/ React__default['default'].createElement(
-    'article',
-    null,
-    /*#__PURE__*/ React__default['default'].createElement(Header, {
-      user: user,
-      onLogin: onLogin,
-      onLogout: onLogout,
-      onCreateAccount: onCreateAccount
-    }),
-    /*#__PURE__*/ React__default['default'].createElement(
-      'section',
-      null,
-      /*#__PURE__*/ React__default['default'].createElement(
-        'h2',
-        null,
-        'Pages in Storybook'
-      ),
-      /*#__PURE__*/ React__default['default'].createElement(
-        'p',
-        null,
-        'We recommend building UIs with a',
-        ' ',
-        /*#__PURE__*/ React__default['default'].createElement(
-          'a',
-          {
-            href: 'https://componentdriven.org',
-            target: '_blank',
-            rel: 'noopener noreferrer'
-          },
-          /*#__PURE__*/ React__default['default'].createElement(
-            'strong',
-            null,
-            'component-driven'
-          )
-        ),
-        ' ',
-        'process starting with atomic components and ending with pages.'
-      ),
-      /*#__PURE__*/ React__default['default'].createElement(
-        'p',
-        null,
-        'Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook:'
-      ),
-      /*#__PURE__*/ React__default['default'].createElement(
-        'ul',
-        null,
-        /*#__PURE__*/ React__default['default'].createElement(
-          'li',
-          null,
-          'Use a higher-level connected component. Storybook helps you compose such data from the "args" of child component stories'
-        ),
-        /*#__PURE__*/ React__default['default'].createElement(
-          'li',
-          null,
-          'Assemble data in the page component from your services. You can mock these services out using Storybook.'
-        )
-      ),
-      /*#__PURE__*/ React__default['default'].createElement(
-        'p',
-        null,
-        'Get a guided tutorial on component-driven development at',
-        ' ',
-        /*#__PURE__*/ React__default['default'].createElement(
-          'a',
-          {
-            href: 'https://storybook.js.org/tutorials/',
-            target: '_blank',
-            rel: 'noopener noreferrer'
-          },
-          'Storybook tutorials'
-        ),
-        '. Read more in the',
-        ' ',
-        /*#__PURE__*/ React__default['default'].createElement(
-          'a',
-          {
-            href: 'https://storybook.js.org/docs',
-            target: '_blank',
-            rel: 'noopener noreferrer'
-          },
-          'docs'
-        ),
-        '.'
-      ),
-      /*#__PURE__*/ React__default['default'].createElement(
-        'div',
-        {
-          className: 'tip-wrapper'
-        },
-        /*#__PURE__*/ React__default['default'].createElement(
-          'span',
-          {
-            className: 'tip'
-          },
-          'Tip'
-        ),
-        ' Adjust the width of the canvas with the',
-        ' ',
-        /*#__PURE__*/ React__default['default'].createElement(
-          'svg',
-          {
-            width: '10',
-            height: '10',
-            viewBox: '0 0 12 12',
-            xmlns: 'http://www.w3.org/2000/svg'
-          },
-          /*#__PURE__*/ React__default['default'].createElement(
-            'g',
-            {
-              fill: 'none',
-              fillRule: 'evenodd'
-            },
-            /*#__PURE__*/ React__default['default'].createElement('path', {
-              d: 'M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z',
-              id: 'a',
-              fill: '#999'
-            })
-          )
-        ),
-        'Viewports addon in the toolbar'
-      )
-    )
-  );
-};
-Page.propTypes = {
-  user: PropTypes__default['default'].shape({}),
-  onLogin: PropTypes__default['default'].func.isRequired,
-  onLogout: PropTypes__default['default'].func.isRequired,
-  onCreateAccount: PropTypes__default['default'].func.isRequired
-};
-Page.defaultProps = {
-  user: null
 };
 
 var _path;
@@ -475,7 +181,7 @@ var SvgGoFrontArrow = function SvgGoFrontArrow(props) {
 
 var _excluded$9 = ['label', 'fontColor', 'arrowColor', 'arrowCircleBackground'];
 /**
- * Primary UI component for user interaction
+ * 다음으로 버튼
  */
 
 var GoFrontButton = function GoFrontButton(_ref) {
@@ -525,12 +231,12 @@ var GoFrontButton = function GoFrontButton(_ref) {
 };
 GoFrontButton.propTypes = {
   /**
-   * Button contents
+   * 라벨 , 안의 텍스트를 변경할 수 있습니다.
    */
   label: PropTypes__default['default'].string.isRequired,
 
   /**
-   * Optional click handler
+   * 클릭 이벤트 콜백 함수
    */
   onClick: PropTypes__default['default'].func,
 
@@ -558,6 +264,10 @@ GoFrontButton.defaultProps = {
 };
 
 var _excluded$8 = ['children'];
+/**
+ * 레이아웃 엘리먼트중에 바디 영역에 해당하는 컴포넌트입니다.
+ */
+
 var TicketBody = function TicketBody(_ref) {
   var children = _ref.children,
     props = _objectWithoutProperties__default['default'](_ref, _excluded$8);
@@ -581,6 +291,10 @@ TicketBody.propTypes = {
 };
 
 var _excluded$7 = ['children'];
+/**
+ * 레이아웃 엘리먼트중에 뒤로가기 버튼 등 맨 윗 영역에 해당하는 컴포넌트입니다.
+ */
+
 var TicketTop = function TicketTop(_ref) {
   var children = _ref.children,
     props = _objectWithoutProperties__default['default'](_ref, _excluded$7);
@@ -605,37 +319,12 @@ TicketTop.propTypes = {
 
 var _excluded$6 = ['children'];
 /**
- * Primary UI component for user interaction
+ * 레이아웃 엘리먼트중에 제목 영역에 해당하는 컴포넌트입니다.
  */
 
-var TicketWrapContainer = function TicketWrapContainer(_ref) {
-  var children = _ref.children,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$6);
-
-  return /*#__PURE__*/ React__default['default'].createElement(
-    'div',
-    _extends__default['default'](
-      {
-        className: 'Ticket-Container-Wrap'
-      },
-      props
-    ),
-    children
-  );
-};
-TicketWrapContainer.propTypes = {
-  /**
-   * any contents to display
-   */
-  children: PropTypes__default['default'].node
-}; // TicketContainer.defaultProps = {
-//   children: [<TicketTop />]
-// };
-
-var _excluded$5 = ['children'];
 var TicketBodyHeader = function TicketBodyHeader(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$5);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$6);
 
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
@@ -655,10 +344,17 @@ TicketBodyHeader.propTypes = {
   children: PropTypes__default['default'].node
 };
 
-var _excluded$4 = ['children'];
+var _excluded$5 = ['children'];
+/**
+ * 내 티켓 리스트 정보를 담는 인포 레이아웃입니다.
+ * 제목과 설명을 담는
+ * https://www.figma.com/file/J6HVLxWGuCFgAQUCdWBUsT/%EA%B3%A0%EC%8A%A4%EB%9D%BD-%ED%8B%B0%EC%BC%93%EC%98%88%EB%A7%A4?node-id=343%3A13341
+ * 자식 컴포넌트로 TicketBody,TicketBodyHeader 를 필요로 합니다.
+ */
+
 var InfoLayout = function InfoLayout(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$4);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$5);
 
   // (제목+설명) + 내용(티켓리스트)
   return /*#__PURE__*/ React__default['default'].createElement(
@@ -674,7 +370,7 @@ var InfoLayout = function InfoLayout(_ref) {
 };
 InfoLayout.propTypes = {
   /**
-   * children components need
+   * TicketBody, TicketBodyHeader 를 자식 컴포넌트로 요구합니다.
    */
   children: PropTypes__default['default'].oneOfType([
     PropTypes__default['default'].arrayOf(
@@ -688,10 +384,14 @@ InfoLayout.propTypes = {
   ]).isRequired
 };
 
-var _excluded$3 = ['children'];
+var _excluded$4 = ['children'];
+/**
+ * 레이아웃 엘리먼트중에 다음으로 버튼 등 아래 영역에 해당하는 컴포넌트입니다.
+ */
+
 var TicketBottom = function TicketBottom(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$3);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$4);
 
   return /*#__PURE__*/ React__default['default'].createElement(
     'div',
@@ -711,10 +411,16 @@ TicketBottom.propTypes = {
   children: PropTypes__default['default'].node
 };
 
-var _excluded$2 = ['children'];
+var _excluded$3 = ['children'];
+/**
+ * 진행 과정 (티켓 발급 , 인증과정등) 제목, 내용 , 다음버튼을 필요로하는 레이아웃 입니다.
+ * https://www.figma.com/file/J6HVLxWGuCFgAQUCdWBUsT/%EA%B3%A0%EC%8A%A4%EB%9D%BD-%ED%8B%B0%EC%BC%93%EC%98%88%EB%A7%A4?node-id=680%3A13148
+ * 자식 컴포넌트로 TicketBody, TicketBodyHeader, TicketBottom 를 필요로 합니다.
+ */
+
 var ProgressLayout = function ProgressLayout(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$2);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$3);
 
   // (제목+설명) + 내용(input 혹은 제목:ticketing-01, list-01) + 하단(다음으로버튼)
   return /*#__PURE__*/ React__default['default'].createElement(
@@ -730,7 +436,7 @@ var ProgressLayout = function ProgressLayout(_ref) {
 };
 ProgressLayout.propTypes = {
   /**
-   * children components need
+   * TicketBody, TicketBodyHeader, TicketBottom 를 자식 컴포넌트로 요구합니다.
    */
   children: PropTypes__default['default'].oneOfType([
     PropTypes__default['default'].arrayOf(
@@ -745,10 +451,16 @@ ProgressLayout.propTypes = {
   ]).isRequired
 };
 
-var _excluded$1 = ['children'];
+var _excluded$2 = ['children'];
+/**
+ * 티켓 정보 출력을 위해 내용을 필요로하는 레이아웃 입니다.
+ * https://www.figma.com/file/J6HVLxWGuCFgAQUCdWBUsT/%EA%B3%A0%EC%8A%A4%EB%9D%BD-%ED%8B%B0%EC%BC%93%EC%98%88%EB%A7%A4?node-id=343%3A13330
+ * 자식 컴포넌트로 TicketBody 를 필요로 합니다.
+ */
+
 var TicketLayout = function TicketLayout(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded$1);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$2);
 
   // 상단(뒤로가기버튼) + 티켓
   return /*#__PURE__*/ React__default['default'].createElement(
@@ -764,7 +476,7 @@ var TicketLayout = function TicketLayout(_ref) {
 };
 TicketLayout.propTypes = {
   /**
-   * children components need
+   * TicketBody 컴포넌트 하나만을 자식 컴포넌트로 필요로 합니다.
    */
   children: PropTypes__default['default'].oneOfType([
     PropTypes__default['default'].shape({
@@ -773,15 +485,19 @@ TicketLayout.propTypes = {
   ]).isRequired
 };
 
-var _excluded = ['TopElement', 'children'];
+var _excluded$1 = ['TopElement', 'children'];
 /**
- * Primary UI component for user interaction
+ * 티켓 발급,인증 과정에서 TicketWarpContainer의 자식 컴포넌트로 들어갑니다
+ * 상단 뒤로가기버튼 영역과 , 그 영역을 제외한 나머지 영역으로 나뉘어져 있습니다
+ * grid : 1fr 7fr 입니다.
+ * TopElemnt prop으로 TicketTop 컴포넌트를 받으며
+ * children으로 TicketLayout, ProgressLayout, InfoLayout 중 하나의 레이아웃을 자식으로 받습니다.
  */
 
 var TicketContainer = function TicketContainer(_ref) {
   var TopElement = _ref.TopElement,
     children = _ref.children,
-    props = _objectWithoutProperties__default['default'](_ref, _excluded);
+    props = _objectWithoutProperties__default['default'](_ref, _excluded$1);
 
   console.log(children);
   return /*#__PURE__*/ React__default['default'].createElement(
@@ -821,7 +537,7 @@ var TicketContainer = function TicketContainer(_ref) {
 };
 TicketContainer.propTypes = {
   /**
-   * children components need
+   * TicketLayout, ProgressLayout, InfoLayout 중 하나의 레이아웃을 인자로 받습니다.
    */
   children: PropTypes__default['default'].oneOfType([
     // PropTypes.arrayOf(
@@ -837,6 +553,10 @@ TicketContainer.propTypes = {
       ])
     })
   ]).isRequired,
+
+  /**
+   * TicketTop 컴포넌트를 인자로 받습니다.
+   */
   TopElement: PropTypes__default['default'].oneOfType([
     PropTypes__default['default'].shape({
       type: TicketTop
@@ -850,12 +570,41 @@ TicketContainer.defaultProps = {
   )
 };
 
-exports.Button = Button;
+var _excluded = ['children'];
+/**
+ *  티켓 발급 , 확인 , 인증 과정에서 TicketContainer 를 감싸는 컨테이너 입니다
+ *  모바일 화면에 맞게 height 를 설정한 컴포넌트 입니다.
+ */
+
+var TicketWrapContainer = function TicketWrapContainer(_ref) {
+  var children = _ref.children,
+    props = _objectWithoutProperties__default['default'](_ref, _excluded);
+
+  return /*#__PURE__*/ React__default['default'].createElement(
+    'div',
+    _extends__default['default'](
+      {
+        className: 'Ticket-Container-Wrap'
+      },
+      props
+    ),
+    children
+  );
+};
+TicketWrapContainer.propTypes = {
+  /**
+   *  자식 컴포넌트로 TicketContainer를 필요로 합니다.
+   */
+  children: PropTypes__default['default'].oneOfType([
+    PropTypes__default['default'].shape({
+      type: PropTypes__default['default'].oneOf([TicketContainer])
+    })
+  ]).isRequired
+};
+
 exports.GoBackButton = GoBackButton;
 exports.GoFrontButton = GoFrontButton;
-exports.Header = Header;
 exports.InfoLayout = InfoLayout;
-exports.Page = Page;
 exports.ProgressLayout = ProgressLayout;
 exports.TicketBody = TicketBody;
 exports.TicketBodyHeader = TicketBodyHeader;

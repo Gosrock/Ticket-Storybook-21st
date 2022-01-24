@@ -4,7 +4,7 @@ import { TicketBodyHeader } from '../../TicketElement/TicketBodyHeader/TicketBod
 import { InfoLayout } from './InfoLayout.jsx';
 
 export default {
-  title: 'Layout/InfoLayout',
+  title: 'Layout/Layout/InfoLayout',
   component: InfoLayout,
   argTypes: {}
 };

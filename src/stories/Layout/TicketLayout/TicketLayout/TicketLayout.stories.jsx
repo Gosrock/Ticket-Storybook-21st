@@ -3,7 +3,7 @@ import { TicketBody } from '../../TicketElement/TicketBody/TicketBody.jsx';
 import { TicketLayout } from './TicketLayout.jsx';
 
 export default {
-  title: 'Layout/TicketLayout',
+  title: 'Layout/Layout/TicketLayout',
   component: TicketLayout,
   argTypes: {}
 };

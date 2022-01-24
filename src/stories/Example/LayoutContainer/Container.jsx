@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Container.css';
-import { TypeOne } from '../Type1/TypeOne';
-import { TypeTwo } from '../Type2/TypeTwo';
-import { TypeThree } from '../Type3/TypeThree';
+import { TypeOne } from '../Container/Type1/TypeOne';
+import { TypeTwo } from '../Container/Type2/TypeTwo';
+import { TypeThree } from '../Container/Type3/TypeThree';
 
 /**
  * Primary UI component for user interaction

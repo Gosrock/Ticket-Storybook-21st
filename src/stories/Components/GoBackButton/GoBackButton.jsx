@@ -4,7 +4,7 @@ import './GoBackButton.css';
 import { ReactComponent as GoBackArrow } from './GoBackArrow.svg';
 
 /**
- * Primary UI component for user interaction
+ * 뒤로가기 버튼
  */
 export const GoBackButton = ({ label, ...props }) => {
   // const mode = primary
@@ -27,11 +27,11 @@ export const GoBackButton = ({ label, ...props }) => {
 
 GoBackButton.propTypes = {
   /**
-   * Button contents
+   * 라벨 , 안의 텍스트를 변경할 수 있습니다.
    */
   label: PropTypes.string.isRequired,
   /**
-   * Optional click handler
+   * 클릭 이벤트 콜백 함수
    */
   onClick: PropTypes.func
 };
