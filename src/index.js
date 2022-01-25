@@ -15,7 +15,7 @@ import { ProgressLayout } from './stories/Layout/TicketLayout/ProgressLayout/Pro
 import { TicketLayout } from './stories/Layout/TicketLayout/TicketLayout/TicketLayout.jsx';
 import { ProcessDescription } from './stories/Components/ProcessDescription/ProcessDescription.jsx';
 import { ProcessTitle } from './stories/Components/ProcessTitle/ProcessTitle.jsx';
-
+import { JaetakButton } from './stories/jaetakButton/jaetakButton.jsx';
 // export
 export {
   GoBackButton,
@@ -30,5 +30,6 @@ export {
   ProgressLayout,
   TicketLayout,
   ProcessDescription,
-  ProcessTitle
+  ProcessTitle,
+  JaetakButton
 };
