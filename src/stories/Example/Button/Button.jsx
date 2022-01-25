@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './button.css';
 
 /**
- * Primary UI component for user interaction
+ * 버튼
  */
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary
@@ -25,7 +25,7 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   *  이건 프라이머리컬러입니다.
    */
   primary: PropTypes.bool,
   /**
