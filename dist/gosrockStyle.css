@@ -196,6 +196,36 @@ table {
     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf)
       format('opentype');
 }
+.ProcessDescription {
+  font-weight: 400;
+  font-size: 18px;
+  color: #b6b7b8;
+}
+
+.ProcessDescription-padding {
+  padding-top: 0.3rem;
+}
+.processTitle {
+  font-weight: 500;
+  color: white;
+}
+.processTitle-size-big {
+  font-size: 48px;
+}
+
+.processTitle-size-medium {
+  font-size: 22px;
+}
+.proccessTitle-padding {
+  padding-top: 0.7rem;
+}
+
+.proccessTitle-align-right {
+  text-align: right;
+}
+.proccessTitle-align-left {
+  text-align: left;
+}
 .GoFrontButton {
   background-color: transparent; /* Green */
   border: none;
@@ -244,19 +274,13 @@ table {
   /* margin-left: 25%;
   margin-top: 25%; */
 }
-.goBackButton {
-  background-color: transparent; /* Green */
-  border: none;
-  color: white;
-  text-align: bottom;
-  text-decoration: none;
+.Ticket-Container-Wrap {
+  /* veiwport fit */
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
-}
-
-.goBackButton--medium {
-  font-size: 18px;
-  line-height: 22px;
-  /* padding: 11px 20px; */
+  justify-content: center;
+  align-items: center;
 }
 .Ticket-Container {
   height: 100%;
@@ -295,18 +319,19 @@ table {
   grid-template-rows: 1fr 4fr 1fr;
 }
 */
-.Ticket-Container-Wrap {
-  /* veiwport fit */
-  width: 100vw;
-  height: calc(var(--vh, 1vh) * 100);
+.goBackButton {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  text-align: bottom;
+  text-decoration: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.TicketBody {
-  order: 5;
 
-  display: flex;
+.goBackButton--medium {
+  font-size: 18px;
+  line-height: 22px;
+  /* padding: 11px 20px; */
 }
 .TicketBodyHeader {
   order: 0;
@@ -318,6 +343,11 @@ table {
 }
 .TicketTop {
   order: -10;
+  display: flex;
+}
+.TicketBody {
+  order: 5;
+
   display: flex;
 }
 .InfoLayout {

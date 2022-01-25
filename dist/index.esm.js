@@ -44,14 +44,14 @@ var SvgGoBackArrow = function SvgGoBackArrow(props) {
   );
 };
 
-var _excluded$a = ['label'];
+var _excluded$c = ['label'];
 /**
  * 뒤로가기 버튼
  */
 
 var GoBackButton = function GoBackButton(_ref) {
   var label = _ref.label,
-    props = _objectWithoutProperties(_ref, _excluded$a);
+    props = _objectWithoutProperties(_ref, _excluded$c);
 
   // const mode = primary
   //   ? 'storybook-button--primary'
@@ -135,7 +135,7 @@ var SvgGoFrontArrow = function SvgGoFrontArrow(props) {
   );
 };
 
-var _excluded$9 = ['label', 'fontColor', 'arrowColor', 'arrowCircleBackground'];
+var _excluded$b = ['label', 'fontColor', 'arrowColor', 'arrowCircleBackground'];
 /**
  * 다음으로 버튼
  */
@@ -145,7 +145,7 @@ var GoFrontButton = function GoFrontButton(_ref) {
     fontColor = _ref.fontColor,
     arrowColor = _ref.arrowColor,
     arrowCircleBackground = _ref.arrowCircleBackground,
-    props = _objectWithoutProperties(_ref, _excluded$9);
+    props = _objectWithoutProperties(_ref, _excluded$b);
 
   // const mode = primary
   //   ? 'storybook-button--primary'
@@ -215,14 +215,14 @@ GoFrontButton.defaultProps = {
   fontColor: 'white'
 };
 
-var _excluded$8 = ['children'];
+var _excluded$a = ['children'];
 /**
  * 레이아웃 엘리먼트중에 바디 영역에 해당하는 컴포넌트입니다.
  */
 
 var TicketBody = function TicketBody(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$8);
+    props = _objectWithoutProperties(_ref, _excluded$a);
 
   return /*#__PURE__*/ React__default.createElement(
     'div',
@@ -242,14 +242,14 @@ TicketBody.propTypes = {
   children: PropTypes.node
 };
 
-var _excluded$7 = ['children'];
+var _excluded$9 = ['children'];
 /**
  * 레이아웃 엘리먼트중에 뒤로가기 버튼 등 맨 윗 영역에 해당하는 컴포넌트입니다.
  */
 
 var TicketTop = function TicketTop(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$7);
+    props = _objectWithoutProperties(_ref, _excluded$9);
 
   return /*#__PURE__*/ React__default.createElement(
     'div',
@@ -269,14 +269,14 @@ TicketTop.propTypes = {
   children: PropTypes.node
 };
 
-var _excluded$6 = ['children'];
+var _excluded$8 = ['children'];
 /**
  * 레이아웃 엘리먼트중에 제목 영역에 해당하는 컴포넌트입니다.
  */
 
 var TicketBodyHeader = function TicketBodyHeader(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$6);
+    props = _objectWithoutProperties(_ref, _excluded$8);
 
   return /*#__PURE__*/ React__default.createElement(
     'div',
@@ -296,7 +296,7 @@ TicketBodyHeader.propTypes = {
   children: PropTypes.node
 };
 
-var _excluded$5 = ['children'];
+var _excluded$7 = ['children'];
 /**
  * 내 티켓 리스트 정보를 담는 인포 레이아웃입니다.
  * 제목과 설명을 담는
@@ -306,7 +306,7 @@ var _excluded$5 = ['children'];
 
 var InfoLayout = function InfoLayout(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$5);
+    props = _objectWithoutProperties(_ref, _excluded$7);
 
   // (제목+설명) + 내용(티켓리스트)
   return /*#__PURE__*/ React__default.createElement(
@@ -333,14 +333,14 @@ InfoLayout.propTypes = {
   ]).isRequired
 };
 
-var _excluded$4 = ['children'];
+var _excluded$6 = ['children'];
 /**
  * 레이아웃 엘리먼트중에 다음으로 버튼 등 아래 영역에 해당하는 컴포넌트입니다.
  */
 
 var TicketBottom = function TicketBottom(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$4);
+    props = _objectWithoutProperties(_ref, _excluded$6);
 
   return /*#__PURE__*/ React__default.createElement(
     'div',
@@ -360,7 +360,7 @@ TicketBottom.propTypes = {
   children: PropTypes.node
 };
 
-var _excluded$3 = ['children'];
+var _excluded$5 = ['children'];
 /**
  * 진행 과정 (티켓 발급 , 인증과정등) 제목, 내용 , 다음버튼을 필요로하는 레이아웃 입니다.
  * https://www.figma.com/file/J6HVLxWGuCFgAQUCdWBUsT/%EA%B3%A0%EC%8A%A4%EB%9D%BD-%ED%8B%B0%EC%BC%93%EC%98%88%EB%A7%A4?node-id=680%3A13148
@@ -369,7 +369,7 @@ var _excluded$3 = ['children'];
 
 var ProgressLayout = function ProgressLayout(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$3);
+    props = _objectWithoutProperties(_ref, _excluded$5);
 
   // (제목+설명) + 내용(input 혹은 제목:ticketing-01, list-01) + 하단(다음으로버튼)
   return /*#__PURE__*/ React__default.createElement(
@@ -396,7 +396,7 @@ ProgressLayout.propTypes = {
   ]).isRequired
 };
 
-var _excluded$2 = ['children'];
+var _excluded$4 = ['children'];
 /**
  * 티켓 정보 출력을 위해 내용을 필요로하는 레이아웃 입니다.
  * https://www.figma.com/file/J6HVLxWGuCFgAQUCdWBUsT/%EA%B3%A0%EC%8A%A4%EB%9D%BD-%ED%8B%B0%EC%BC%93%EC%98%88%EB%A7%A4?node-id=343%3A13330
@@ -405,7 +405,7 @@ var _excluded$2 = ['children'];
 
 var TicketLayout = function TicketLayout(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$2);
+    props = _objectWithoutProperties(_ref, _excluded$4);
 
   // 상단(뒤로가기버튼) + 티켓
   return /*#__PURE__*/ React__default.createElement(
@@ -430,7 +430,7 @@ TicketLayout.propTypes = {
   ]).isRequired
 };
 
-var _excluded$1 = ['TopElement', 'children'];
+var _excluded$3 = ['TopElement', 'children'];
 /**
  * 티켓 발급,인증 과정에서 TicketWarpContainer의 자식 컴포넌트로 들어갑니다
  * 상단 뒤로가기버튼 영역과 , 그 영역을 제외한 나머지 영역으로 나뉘어져 있습니다
@@ -442,7 +442,7 @@ var _excluded$1 = ['TopElement', 'children'];
 var TicketContainer = function TicketContainer(_ref) {
   var TopElement = _ref.TopElement,
     children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded$1);
+    props = _objectWithoutProperties(_ref, _excluded$3);
 
   console.log(children);
   return /*#__PURE__*/ React__default.createElement(
@@ -497,7 +497,7 @@ TicketContainer.propTypes = {
    */
   TopElement: PropTypes.oneOfType([
     PropTypes.shape({
-      type: TicketTop
+      type: PropTypes.oneOf([TicketTop])
     })
   ])
 };
@@ -505,7 +505,7 @@ TicketContainer.defaultProps = {
   TopElement: /*#__PURE__*/ React__default.createElement(TicketTop, null)
 };
 
-var _excluded = ['children'];
+var _excluded$2 = ['children'];
 /**
  *  티켓 발급 , 확인 , 인증 과정에서 TicketContainer 를 감싸는 컨테이너 입니다
  *  모바일 화면에 맞게 height 를 설정한 컴포넌트 입니다.
@@ -513,7 +513,7 @@ var _excluded = ['children'];
 
 var TicketWrapContainer = function TicketWrapContainer(_ref) {
   var children = _ref.children,
-    props = _objectWithoutProperties(_ref, _excluded);
+    props = _objectWithoutProperties(_ref, _excluded$2);
 
   return /*#__PURE__*/ React__default.createElement(
     'div',
@@ -537,10 +537,121 @@ TicketWrapContainer.propTypes = {
   ]).isRequired
 };
 
+var _excluded$1 = ['topLabel', 'bottomLabel'];
+/**
+ * 진행과정속 부 설명부분입니다.
+ */
+
+var ProcessDescription = function ProcessDescription(_ref) {
+  var topLabel = _ref.topLabel,
+    bottomLabel = _ref.bottomLabel,
+    props = _objectWithoutProperties(_ref, _excluded$1);
+
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    props,
+    /*#__PURE__*/ React__default.createElement(
+      'p',
+      {
+        className: 'ProcessDescription '
+      },
+      topLabel
+    ),
+    bottomLabel &&
+      /*#__PURE__*/ React__default.createElement(
+        'p',
+        {
+          className: 'ProcessDescription proccessTitle-padding '
+        },
+        bottomLabel
+      )
+  );
+};
+ProcessDescription.propTypes = {
+  /**
+   * 위쪽의 텍스트를 변경할 수 있습니다.
+   */
+  topLabel: PropTypes.string.isRequired,
+
+  /**
+   * 아랫쪽의 텍스트를 변경할 수 있습니다. null 값으로 값을 안주셔도 됩니다.
+   */
+  bottomLabel: PropTypes.string
+};
+ProcessDescription.defaultProps = {
+  topLabel: '위쪽 콘텐츠를 채워주세요',
+  bottomLabel: null
+};
+
+var _excluded = ['topLabel', 'bottomLabel', 'textAlign', 'textSize'];
+/**
+ * 진행과정속 제목입니다.
+ */
+
+var ProcessTitle = function ProcessTitle(_ref) {
+  var topLabel = _ref.topLabel,
+    bottomLabel = _ref.bottomLabel,
+    textAlign = _ref.textAlign,
+    textSize = _ref.textSize,
+    props = _objectWithoutProperties(_ref, _excluded);
+
+  return /*#__PURE__*/ React__default.createElement(
+    'div',
+    props,
+    /*#__PURE__*/ React__default.createElement(
+      'p',
+      {
+        className: 'processTitle proccessTitle-align-'
+          .concat(textAlign, ' processTitle-size-')
+          .concat(textSize)
+      },
+      topLabel
+    ),
+    /*#__PURE__*/ React__default.createElement(
+      'p',
+      {
+        className: 'processTitle proccessTitle-padding proccessTitle-align-'
+          .concat(textAlign, ' processTitle-size-')
+          .concat(textSize)
+      },
+      bottomLabel
+    )
+  );
+};
+ProcessTitle.propTypes = {
+  /**
+   * 위쪽의 텍스트를 변경할 수 있습니다.
+   */
+  topLabel: PropTypes.string.isRequired,
+
+  /**
+   * 아랫쪽의 텍스트를 변경할 수 있습니다.
+   */
+  bottomLabel: PropTypes.string.isRequired,
+
+  /**
+   * 텍스트의 크기를 정할 수 있습니다.
+   */
+  textSize: PropTypes.oneOf(['big', 'medium']),
+
+  /**
+   * 텍스트의 정렬방향을 정할 수 있습니다.
+   */
+  textAlign: PropTypes.oneOf(['right', 'left'])
+};
+ProcessTitle.defaultProps = {
+  topLabel: '위쪽 콘텐츠를 채워주세요',
+  bottomLabel: '아랫쪽 채워주세요',
+  textAlign: 'left',
+  textSize: 'medium'
+};
+
 export {
   GoBackButton,
   GoFrontButton,
   InfoLayout,
+  ProcessDescription,
+  ProcessTitle,
   ProgressLayout,
   TicketBody,
   TicketBodyHeader,

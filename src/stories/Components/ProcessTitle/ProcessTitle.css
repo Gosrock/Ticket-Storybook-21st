@@ -1,0 +1,21 @@
+.processTitle {
+  font-weight: 500;
+  color: white;
+}
+.processTitle-size-big {
+  font-size: 48px;
+}
+
+.processTitle-size-medium {
+  font-size: 22px;
+}
+.proccessTitle-padding {
+  padding-top: 0.7rem;
+}
+
+.proccessTitle-align-right {
+  text-align: right;
+}
+.proccessTitle-align-left {
+  text-align: left;
+}
