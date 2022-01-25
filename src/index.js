@@ -14,6 +14,7 @@ import { InfoLayout } from './stories/Layout/TicketLayout/InfoLayout/InfoLayout.
 import { ProgressLayout } from './stories/Layout/TicketLayout/ProgressLayout/ProgressLayout.jsx';
 import { TicketLayout } from './stories/Layout/TicketLayout/TicketLayout/TicketLayout.jsx';
 import { JaetakButton } from './stories/jaetakButton/jaetakButton.jsx';
+import { UtilityButton } from './stories/Components/UtilityButton/UtilityButton.jsx';
 // export
 export {
   GoBackButton,
@@ -27,5 +28,6 @@ export {
   InfoLayout,
   ProgressLayout,
   TicketLayout,
-  JaetakButton
+  JaetakButton,
+  UtilityButton
 };
