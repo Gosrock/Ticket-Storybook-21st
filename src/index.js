@@ -13,6 +13,8 @@ import { TicketBottom } from './stories/Layout/TicketElement/TicketBottom/Ticket
 import { InfoLayout } from './stories/Layout/TicketLayout/InfoLayout/InfoLayout.jsx';
 import { ProgressLayout } from './stories/Layout/TicketLayout/ProgressLayout/ProgressLayout.jsx';
 import { TicketLayout } from './stories/Layout/TicketLayout/TicketLayout/TicketLayout.jsx';
+import { ProcessDescription } from './stories/Components/ProcessDescription/ProcessDescription.jsx';
+import { ProcessTitle } from './stories/Components/ProcessTitle/ProcessTitle.jsx';
 import { JaetakButton } from './stories/jaetakButton/jaetakButton.jsx';
 import { UtilityButton } from './stories/Components/UtilityButton/UtilityButton.jsx';
 // export
@@ -29,5 +31,7 @@ export {
   ProgressLayout,
   TicketLayout,
   JaetakButton,
-  UtilityButton
+  UtilityButton,
+  ProcessDescription,
+  ProcessTitle
 };
