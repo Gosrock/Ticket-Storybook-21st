@@ -8,19 +8,19 @@ export default {
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' }
+    backgroundColor: { control: false }
   }
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = args => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const 예재 = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: ['asdfasdf'],
-  label: '이찬진',
-  size: 'asdf'
+
+export const 한규진바보버튼 = Template.bind({});
+한규진바보버튼.args = {
+  label: '한규진바보버튼'
 };
 
 export const 화가난주안 = Template.bind({});
@@ -38,14 +38,19 @@ Secondary.args = {
   label: '버튼'
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: '버튼'
-};
+// export const Large = Template.bind({});
+// Large.args = {
+//   size: 'large',
+//   label: '버튼'
+// };
 
-export const SmallTest = Template.bind({});
-SmallTest.args = {
-  size: 'small',
-  label: '버튼'
+// export const SmallTest = Template.bind({});
+// SmallTest.args = {
+//   size: 'small',
+//   label: '버튼'
+// };
+
+export const 이찬진천재 = Template.bind({});
+이찬진천재.args = {
+  label: '이찬진천재'
 };
