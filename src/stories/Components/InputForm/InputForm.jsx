@@ -29,23 +29,11 @@ export const InputForm = ({
 };
 
 InputForm.propTypes = {
-  /**
-   * input type. text or number.
-   */
   type: PropTypes.oneOf(['text', 'number']).isRequired,
-
-  /**
-   * placeholder의 내용
-   */
   placeholder: PropTypes.string.isRequired,
-  /*
-  value
-  */
   value: PropTypes.string,
-  /*
-  onchange function
-  */
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  optionComponent: PropTypes.oneOf([])
 };
 
 InputForm.defaultProps = {

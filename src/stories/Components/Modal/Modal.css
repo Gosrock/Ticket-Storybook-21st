@@ -1,0 +1,8 @@
+.modal-box {
+  height: 285px;
+  width: calc(100%-80px);
+  background-color: #262626;
+  border-radius: 15px;
+  max-width: 400px;
+  padding: 30px;
+}
