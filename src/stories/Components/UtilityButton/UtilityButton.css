@@ -1,0 +1,28 @@
+.UtilityButton {
+  position: absolute;
+  width: 160px;
+  height: 42px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.408px;
+  color: black;
+  background-color: transparent;
+  border: 0;
+  border-radius: 8px;
+  line-height: 22px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.UtilityButton--backgroundColor-white {
+  background-color: white;
+}
+
+.UtilityButton--backgroundColor-yellow {
+  background-color: yellow;
+}
