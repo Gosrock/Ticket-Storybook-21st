@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Modal.css';
-import { GoFrontButton } from '../GoFrontButton/GoFrontButton';
+import { GoFrontButton } from '../GoFrontButton/GoFrontButton.jsx';
 
 export const Modal = ({ onClickPurchased, onClickKakao }) => {
   return (
