@@ -16,13 +16,13 @@ export const Default = Template.bind({});
 export const 휴대폰번호 = Template.bind({});
 휴대폰번호.args = {
   type: 'number',
-  placeholder: '휴대폰 번호'
+  placeholder: '휴대폰 번호 입력'
 };
 
 export const 인증번호 = Template.bind({});
 인증번호.args = {
   type: 'number',
-  placeholder: '인증 번호'
+  placeholder: '인증번호 입력'
 };
 
 export const 티켓매수 = Template.bind({});

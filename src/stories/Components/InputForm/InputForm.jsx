@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Timer } from './Indicator/Timer.jsx';
+import { ValidationDesc } from './Desc/ValidationDesc.jsx';
 import './InputForm.css';
 
 export const InputForm = ({
   type,
   placeholder,
   value,
-  optionComponent,
   descComponent,
-  onChange
+  onChange,
+  resend
 }) => {
   return (
     <>
@@ -20,10 +22,12 @@ export const InputForm = ({
           onChange={onChange}
           placeholder={placeholder}
         />
-        <div className="input-option">{optionComponent}</div>
+        <div className="input-indicator">
+          <Timer />
+        </div>
         <div class="border-animate"></div>
       </div>
-      {descComponent}
+      <ValidationDesc resend={resend} />
     </>
   );
 };
@@ -33,7 +37,7 @@ InputForm.propTypes = {
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string,
   onChange: PropTypes.func,
-  optionComponent: PropTypes.oneOf([])
+  resend: PropTypes.func
 };
 
 InputForm.defaultProps = {
