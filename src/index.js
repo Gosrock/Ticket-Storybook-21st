@@ -17,6 +17,8 @@ import { ProcessDescription } from './stories/Components/ProcessDescription/Proc
 import { ProcessTitle } from './stories/Components/ProcessTitle/ProcessTitle.jsx';
 import { JaetakButton } from './stories/jaetakButton/jaetakButton.jsx';
 import { UtilityButton } from './stories/Components/UtilityButton/UtilityButton.jsx';
+import { InputForm } from './stories/Components/InputForm/InputForm';
+import { Modal } from './stories/Components/Modal/Modal';
 // export
 export {
   GoBackButton,
@@ -33,5 +35,7 @@ export {
   JaetakButton,
   UtilityButton,
   ProcessDescription,
-  ProcessTitle
+  ProcessTitle,
+  InputForm,
+  Modal
 };
