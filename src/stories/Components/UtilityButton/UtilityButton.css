@@ -23,6 +23,14 @@
   background-color: white;
 }
 
+.UtilityButton--backgroundColor-white:active {
+  background-color: rgb(196, 196, 196);
+}
+
 .UtilityButton--backgroundColor-yellow {
-  background-color: yellow;
+  background-color: #ffeb00;
+}
+
+.UtilityButton--backgroundColor-yellow:active {
+  background-color: #bdaf16;
 }
