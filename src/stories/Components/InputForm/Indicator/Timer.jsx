@@ -1,9 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import './Timer.css';
+import './Indicator.css';
 
-export const Timer = () => {
-  const [time, setTime] = useState(180);
+export const Timer = ({ time, setTime }) => {
   const [isRunning, setIsRunning] = useState(true);
   const savedCallback = useRef();
 
@@ -34,7 +33,7 @@ export const Timer = () => {
   }, [time]);
 
   return (
-    <div className="timer">
+    <div className="indicator">
       {parseInt(time / 60)}:{('00' + parseInt(time % 60)).slice(-2)}
     </div>
   );
