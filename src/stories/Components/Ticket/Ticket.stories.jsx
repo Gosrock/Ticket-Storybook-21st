@@ -4,14 +4,17 @@ import { Ticket } from './Ticket.jsx';
 
 export default {
   title: 'Components/Ticket',
-  component: Ticket
+  component: Ticket,
+  argTypes: {}
 };
 
-const Template = args => <Ticket {...args} />;
+const Template = args => (
+  <div>
+    <Ticket {...args} />
+  </div>
+);
 
 export const 입금확인전티켓 = Template.bind({});
-export const 입금확인후티켓 = Template.bind({});
-
 입금확인전티켓.args = {
   date: '22.03.10',
   place: 'CLUB 001',
@@ -19,6 +22,7 @@ export const 입금확인후티켓 = Template.bind({});
   QRvalue: 'https://github.com/Gosrock'
 };
 
+export const 입금확인후티켓 = Template.bind({});
 입금확인후티켓.args = {
   date: '22.03.10',
   place: 'CLUB 001',
