@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import './ValidationDesc.css';
+import './Desc.css';
 
 export const ValidationDesc = ({ ...props }) => {
   return (
     <div>
-      <p className="validationDesc">
+      <p className="Desc">
         문자가 오지 않았나요? &nbsp;&nbsp;
         <span className="resend" {...props}>
           재전송
