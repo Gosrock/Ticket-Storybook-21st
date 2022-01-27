@@ -17,11 +17,6 @@ export const InputForm = ({
 }) => {
   const [time, setTime] = useState(180);
 
-  const onClickResend = () => {
-    resend;
-    setTime(180);
-  };
-
   return (
     <>
       <div className="input-form">
@@ -38,7 +33,14 @@ export const InputForm = ({
         </div>
         <div class="border-animate"></div>
       </div>
-      {isValidate && <ValidationDesc onClick={onClickResend} />}
+      {isValidate && (
+        <ValidationDesc
+          onClick={() => {
+            resend();
+            setTime(180);
+          }}
+        />
+      )}
     </>
   );
 };
@@ -57,5 +59,6 @@ InputForm.propTypes = {
 InputForm.defaultProps = {
   type: 'text',
   placeholder: 'placeholder를 입력해주세요',
-  ticketCount: 1
+  ticketCount: 1,
+  resend: () => {}
 };
