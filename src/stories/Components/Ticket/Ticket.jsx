@@ -7,7 +7,7 @@ import QRCode from 'qrcode.react';
 export const Ticket = ({ date, place, payment, QRvalue }) => {
   return (
     <>
-      <div className="background">
+      <div className="ticket-background">
         <div className="ticket-box">
           <div
             className={[
@@ -24,10 +24,12 @@ export const Ticket = ({ date, place, payment, QRvalue }) => {
               level={'L'}
               includeMargin={false}
               renderAs={'svg'}
+              style={{ zIndex: 10 }}
             />
+            <div></div>
           </div>
         </div>
-        <div className="info">
+        <div className="ticket-info">
           <span
             style={{
               color: 'white',
@@ -50,7 +52,7 @@ export const Ticket = ({ date, place, payment, QRvalue }) => {
             {place}
           </span>
         </div>
-        <div className="logo">
+        <div className="ticket-logo">
           <GosrockLogo></GosrockLogo>
         </div>
       </div>
@@ -63,7 +65,9 @@ Ticket.propTypes = {
 
   place: PropTypes.string,
 
-  payment: PropTypes.bool
+  payment: PropTypes.bool,
+
+  QRvalue: PropTypes.string
 };
 
 Ticket.defaultProps = {
