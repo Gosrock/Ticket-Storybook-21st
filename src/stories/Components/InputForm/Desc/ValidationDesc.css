@@ -1,0 +1,15 @@
+.validationDesc {
+  font-weight: 400;
+  font-size: 16px;
+  color: #b6b7b8;
+  margin-top: 8px;
+}
+
+.resend {
+  color: white;
+  cursor: default;
+}
+
+.resend:active {
+  color: #bf94e4;
+}
