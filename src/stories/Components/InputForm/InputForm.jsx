@@ -18,7 +18,7 @@ export const InputForm = ({
   const [time, setTime] = useState(180);
 
   const onClickResend = () => {
-    resend;
+    resend();
     setTime(180);
   };
 
