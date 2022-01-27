@@ -4,18 +4,20 @@ import './Ticket.css';
 import { ReactComponent as GosrockLogo } from './GosrockLogoWhite.svg';
 import QRCode from 'qrcode.react';
 
-export const Ticket = ({ date, place, payment }) => {
+export const Ticket = ({ date, place, payment, QRvalue }) => {
   return (
     <>
       <div className="background">
         <div className="ticket-box">
           <div
-            className={['ticket-container', `ticket-container-${payment}`].join(
-              ' '
-            )}
+            className={[
+              'ticket-container',
+              `ticket-container-${payment}`,
+              `ticket-container-${payment}-b`
+            ].join(' ')}
           >
             <QRCode
-              value={'http://picturesofpeoplescanningqrcodes.tumblr.com/'}
+              value={QRvalue}
               size={173}
               bgColor={'#ffffff'}
               fgColor={'#000000'}
@@ -67,5 +69,6 @@ Ticket.propTypes = {
 Ticket.defaultProps = {
   date: '22.03.10',
   place: 'CLUB 001',
-  payment: false
+  payment: false,
+  QRvalue: 'https://github.com/Gosrock'
 };
