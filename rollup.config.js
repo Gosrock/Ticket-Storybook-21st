@@ -17,7 +17,8 @@ const OUTPUT_NAME = 'Example';
 const GLOBALS = {
   react: 'React',
   'react-dom': 'ReactDOM',
-  'prop-types': 'PropTypes'
+  'prop-types': 'PropTypes',
+  'qrcode.react': 'qrcode.react'
 };
 
 const PLUGINS = [
@@ -40,7 +41,12 @@ const PLUGINS = [
   }),
   resolve({
     // browser: true,
-    resolveOnly: [/^(?!react$)/, /^(?!react-dom$)/, /^(?!prop-types)/]
+    resolveOnly: [
+      /^(?!react$)/,
+      /^(?!react-dom$)/,
+      /^(?!prop-types)/,
+      /^(?!qrcode.react)/
+    ]
   }),
   commonjs(),
   filesize(),
@@ -50,7 +56,7 @@ const PLUGINS = [
 ];
 
 // peer dependency 와 연관
-const EXTERNAL = ['react', 'react-dom', 'prop-types'];
+const EXTERNAL = ['react', 'react-dom', 'prop-types', 'qrcode.react'];
 
 const CJS_AND_ES_EXTERNALS = EXTERNAL.concat(/@babel\/runtime/);
 
