@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { UtilityButton } from './UtilityButton.jsx';
-import { ReactComponent as ShareAlt } from './ShareAlt.svg';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Components/UtilityButton',
   component: UtilityButton
