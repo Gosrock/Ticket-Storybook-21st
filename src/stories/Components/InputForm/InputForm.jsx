@@ -36,7 +36,7 @@ export const InputForm = ({
     count: {
       type: 'number',
       placeholder: '1',
-      limit: 2
+      limit: 1
     },
     name: {
       type: 'string',
@@ -45,6 +45,7 @@ export const InputForm = ({
     }
   };
   const [time, setTime] = useState(180);
+  const [countInput, setcountInput] = useState(1);
   const input = useRef();
 
   const selectPage = pageObj[page];
@@ -67,8 +68,8 @@ export const InputForm = ({
           onChange={e => {
             onChange();
             handleValidateNumber(e, selectPage.limit);
-            if (page == 'count' && e.target.value > 10) {
-              e.target.value = 10;
+            if (page == 'count') {
+              setcountInput(e.target.value);
             }
             if (page == 'name') {
               const inputValue = e.target.value;
@@ -77,12 +78,17 @@ export const InputForm = ({
               }
             }
           }}
+          onKeyPress={e => {
+            if (e.key === 'Enter') {
+              e.target.blur();
+            }
+          }}
           placeholder={selectPage.placeholder}
           ref={input}
         />
         <div className="input-indicator">
           {page == 'validate' && <Timer time={time} setTime={setTime} />}
-          {page == 'count' && <Price ticketCount={ticketCount} />}
+          {page == 'count' && <Price ticketCount={countInput} />}
           {page == 'name' && <Price ticketCount={ticketCount} />}
         </div>
         <div class="border-animate"></div>
@@ -97,7 +103,7 @@ export const InputForm = ({
         />
       )}
       {page == 'count' && (
-        <Desc desc={'티켓은 한번에 10매까지 구매 가능합니다.'} />
+        <Desc desc={'티켓은 한번에 9매까지 구매 가능합니다.'} />
       )}
       {page == 'name' && <Desc desc={'이름은 4자 이내로 입력해주세요.'} />}
     </>
