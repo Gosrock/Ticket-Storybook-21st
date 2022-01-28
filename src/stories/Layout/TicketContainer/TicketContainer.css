@@ -15,6 +15,12 @@
   grid-template-rows: 1fr 7fr;
 }
 
+@media screen and (min-width: 600px) {
+  .Ticket-Container {
+    border-radius: 15px;
+  }
+}
+
 /* @media screen and (min-width: 480px) {
   .Ticket-Container {
     min-width: 375px;

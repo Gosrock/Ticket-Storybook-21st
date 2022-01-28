@@ -10,7 +10,7 @@ export const ProcessDescription = ({ topLabel, bottomLabel, ...props }) => {
     <div {...props}>
       <p className={`ProcessDescription `}>{topLabel}</p>
       {bottomLabel && (
-        <p className={`ProcessDescription proccessTitle-padding `}>
+        <p className={`ProcessDescription proccessDescription-padding `}>
           {bottomLabel}
         </p>
       )}
