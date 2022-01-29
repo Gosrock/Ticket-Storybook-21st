@@ -5,6 +5,7 @@
   border-radius: 15px;
   display: grid;
   grid-template-rows: auto 136px;
+  margin: auto;
 }
 
 .modal-container {
