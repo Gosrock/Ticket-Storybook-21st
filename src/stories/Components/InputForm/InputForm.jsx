@@ -66,12 +66,12 @@ export const InputForm = ({
           type={selectPage.type}
           value={value}
           onChange={e => {
-            onChange();
+            onChange(e);
             handleValidateNumber(e, selectPage.limit);
-            if (page == 'count') {
+            if (page === 'count') {
               setcountInput(e.target.value);
             }
-            if (page == 'name') {
+            if (page === 'name') {
               const inputValue = e.target.value;
               if (inputValue.length > 4) {
                 e.target.value = inputValue.slice(0, -1);
@@ -87,13 +87,13 @@ export const InputForm = ({
           ref={input}
         />
         <div className="input-indicator">
-          {page == 'validate' && <Timer time={time} setTime={setTime} />}
-          {page == 'count' && <Price ticketCount={countInput} />}
-          {page == 'name' && <Price ticketCount={ticketCount} />}
+          {page === 'validate' && <Timer time={time} setTime={setTime} />}
+          {page === 'count' && <Price ticketCount={countInput} />}
+          {page === 'name' && <Price ticketCount={ticketCount} />}
         </div>
-        <div class="border-animate"></div>
+        <div className="border-animate"></div>
       </div>
-      {page == 'validate' && (
+      {page === 'validate' && (
         <ValidationDesc
           onClick={() => {
             resend();
