@@ -56,7 +56,8 @@ export const InputForm = ({
 
   useEffect(() => {
     input.current.focus();
-  }, []);
+    console.log('asdf');
+  }, [input]);
 
   return (
     <>
