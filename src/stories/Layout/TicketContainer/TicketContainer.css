@@ -10,9 +10,11 @@
 .Ticket-Inner-Container {
   box-sizing: border-box;
   height: 100%;
-  padding: 5% 5%;
+  padding: 6% 6%;
   display: grid;
   grid-template-rows: 1fr 7fr;
+  max-height: 620px;
+  min-width: 300px;
 }
 
 @media screen and (min-width: 600px) {
