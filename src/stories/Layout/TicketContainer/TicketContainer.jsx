@@ -14,8 +14,6 @@ import './TicketContainer.css';
  * children으로 TicketLayout, ProgressLayout, InfoLayout 중 하나의 레이아웃을 자식으로 받습니다.
  */
 export const TicketContainer = ({ TopElement, children, ...props }) => {
-  console.log(children);
-
   return (
     <div className="Ticket-Container" {...props}>
       <div className="Ticket-Inner-Container">
