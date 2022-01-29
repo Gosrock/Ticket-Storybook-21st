@@ -7,6 +7,7 @@ import replace from '@rollup/plugin-replace';
 import filesize from 'rollup-plugin-filesize';
 import css from 'rollup-plugin-css-only';
 import svgr from '@svgr/rollup';
+import del from 'rollup-plugin-delete';
 // package.json 에 main , module 등 설정해논 경로가 있음
 import pkg from './package.json';
 
@@ -52,7 +53,13 @@ const PLUGINS = [
   filesize(),
   url(),
   svgr({ icon: true }),
-  image()
+  image(),
+  del({
+    targets: 'dist/*.svg',
+    verbose: true,
+    hook: 'writeBundle',
+    runOnce: false
+  })
 ];
 
 // peer dependency 와 연관
@@ -62,12 +69,12 @@ const CJS_AND_ES_EXTERNALS = EXTERNAL.concat(/@babel\/runtime/);
 
 const OUTPUT_DATA = [
   {
-    file: pkg.main,
-    format: 'cjs'
-  },
-  {
     file: pkg.module,
     format: 'es'
+  },
+  {
+    file: pkg.main,
+    format: 'cjs'
   }
 ];
 

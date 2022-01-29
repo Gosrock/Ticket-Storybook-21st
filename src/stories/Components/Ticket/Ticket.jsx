@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Ticket.css';
-import { ReactComponent as GosrockLogo } from './GosrockLogoWhite.svg';
+import { ReactComponent as GosrockLogo } from './GosrockLogo.svg';
 import QRCode from 'qrcode.react';
 
 export const Ticket = ({ date, place, payment, QRvalue }) => {
@@ -52,9 +52,7 @@ export const Ticket = ({ date, place, payment, QRvalue }) => {
             {place}
           </span>
         </div>
-        <div className="ticket-logo">
-          <GosrockLogo></GosrockLogo>
-        </div>
+        <GosrockLogo className="ticket-logo" fill={'#b6b7b8'} />
       </div>
     </>
   );
