@@ -14,16 +14,19 @@ export const Modal = ({
   const toast = string => {
     const toast = document.getElementById('toast');
 
-    toast.classList.contains('reveal')
-      ? (clearTimeout(removeToast),
-        (removeToast = setTimeout(function () {
-          document.getElementById('toast').classList.remove('reveal');
-        }, 1000)))
-      : (removeToast = setTimeout(function () {
-          document.getElementById('toast').classList.remove('reveal');
-        }, 1000));
-    toast.classList.add('reveal'),
-      (toast.innerText = '계좌 복사가 완료되었습니다.');
+    if (toast.classList.contains('reveal')) {
+      clearTimeout(removeToast);
+      removeToast = setTimeout(function () {
+        document.getElementById('toast').classList.remove('reveal');
+      }, 1000);
+    } else {
+      removeToast = setTimeout(function () {
+        document.getElementById('toast').classList.remove('reveal');
+      }, 1000);
+    }
+
+    toast.classList.add('reveal');
+    toast.innerText = '계좌 복사가 완료되었습니다.';
   };
 
   const copyNumber = () => {
