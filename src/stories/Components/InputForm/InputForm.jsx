@@ -24,17 +24,17 @@ export const InputForm = ({
       placeholder: 'placeholder 입력'
     },
     phone: {
-      type: 'number',
+      type: 'tel',
       placeholder: '휴대폰 번호 입력',
       limit: 11
     },
     validate: {
-      type: 'number',
+      type: 'tel',
       placeholder: '인증번호 입력',
       limit: 6
     },
     count: {
-      type: 'number',
+      type: 'tel',
       placeholder: '1',
       limit: 1
     },
@@ -102,10 +102,6 @@ export const InputForm = ({
           }}
         />
       )}
-      {page == 'count' && (
-        <Desc desc={'티켓은 한번에 9매까지 구매 가능합니다.'} />
-      )}
-      {page == 'name' && <Desc desc={'이름은 4자 이내로 입력해주세요.'} />}
     </>
   );
 };
