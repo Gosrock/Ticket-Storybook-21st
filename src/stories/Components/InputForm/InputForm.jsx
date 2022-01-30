@@ -57,6 +57,7 @@ export const InputForm = ({
   useEffect(() => {
     setTimeout(() => {
       input.current.focus();
+      input.current.focus();
     }, 100);
   }, []);
 
