@@ -14,7 +14,7 @@ export const Ticket = ({ date, place, payment, QRvalue }) => {
           // preserveAspectRatio="xMinYMin slice"
           width="100%"
           height="100%"
-          viewBox="0 0 100% 100%"
+          viewBox="0 0"
         ></TicketBackgroud>
         <div className="ticket-box-wrapper">
           <div className="ticket-box">
