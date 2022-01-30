@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Ticket } from './Ticket.jsx';
+import { TicketLayout_컨텐츠_티켓 } from '../../Layout/TicketContainer/TicketContainer.stories';
 
 export default {
   title: 'Components/Ticket',
@@ -10,7 +11,9 @@ export default {
 
 const Template = args => (
   <div>
-    <Ticket {...args} />
+    <TicketLayout_컨텐츠_티켓>
+      <Ticket {...args} />
+    </TicketLayout_컨텐츠_티켓>
   </div>
 );
 
