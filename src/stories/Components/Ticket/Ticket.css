@@ -24,6 +24,8 @@
 
 .ticket-box {
   position: absolute;
+  width: 234px;
+  height: 234px;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
@@ -49,7 +51,7 @@
 }
 
 .ticket-container-true {
-  position: absoulute;
+  position: absolute;
   width: 204px;
   height: 204px;
   display: flex;
