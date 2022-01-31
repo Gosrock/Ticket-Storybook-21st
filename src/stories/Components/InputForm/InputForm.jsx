@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Timer } from './Indicator/Timer.jsx';
 import { Price } from './Indicator/Price.jsx';
@@ -46,7 +46,7 @@ export const InputForm = ({
   };
   const [time, setTime] = useState(180);
   const [countInput, setcountInput] = useState(1);
-  const input = useRef();
+  // const input = useRef();
 
   const selectPage = pageObj[page];
 
@@ -54,13 +54,20 @@ export const InputForm = ({
     if (e.target.value.length >= limit) e.target.blur();
   };
 
-  useEffect(() => {
-    if (input.current) {
-      setTimeout(() => {
-        input.current.focus();
-      }, 100);
+  const inputRef = useCallback(node => {
+    if (node !== null) {
+      // console.log(node);
+      node.focus();
     }
-  }, [input]);
+  }, []);
+  // useEffect(() => {
+  //   console.log('if out', input.current);
+
+  //   if (input.current) {
+  //     console.log('if in', input.current);
+  //     input.current.focus();
+  //   }
+  // }, [input]);
 
   return (
     <>
@@ -88,7 +95,7 @@ export const InputForm = ({
             }
           }}
           placeholder={selectPage.placeholder}
-          ref={input}
+          ref={inputRef}
         />
         <div className="input-indicator">
           {page === 'validate' && <Timer time={time} setTime={setTime} />}
