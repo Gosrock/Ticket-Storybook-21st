@@ -9,16 +9,10 @@ import {
   입장완료
 } from '../StateIcon/StateIcon.stories.jsx';
 
-export const TicketList = ({
-  date1,
-  date2,
-  performdate,
-  bookdate,
-  ...props
-}) => {
+export const TicketList = ({ performdate, bookdate, ...props }) => {
   return (
     <>
-      <button className={['TicketList'].join(' ')} {...props}>
+      <button className={'TicketList'}>
         <div className={'TicketList-ticketState'}>
           <입금확인></입금확인>
         </div>
@@ -26,12 +20,12 @@ export const TicketList = ({
         <div className={'TicketList-info'}>
           <div>
             <p>
-              <span style={{ fontWeight: '700' }}>공연날짜</span> {performdate}
+              <span style={{ fontWeight: '700' }}>공연일</span> {performdate}
             </p>
           </div>
           <div>
             <p>
-              <span style={{ fontWeight: '700' }}>예매일시</span> {bookdate}
+              <span style={{ fontWeight: '700' }}>예매일</span> {bookdate}
             </p>
           </div>
         </div>
@@ -52,8 +46,6 @@ TicketList.propTypes = {
 
 TicketList.defaultProps = {
   onClick: undefined,
-  date1: '관람일시',
-  date2: '예매일시',
-  performdate: '관람일',
-  bookdate: '공연일'
+  performdate: '공연일',
+  bookdate: '예매일'
 };

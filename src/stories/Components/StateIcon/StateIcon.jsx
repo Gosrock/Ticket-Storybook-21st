@@ -23,7 +23,7 @@ export const StateIcon = ({ label, background, word, ...props }) => {
 StateIcon.propTypes = {
   label: PropTypes.string.isRequired,
   background: PropTypes.oneOf(['green', 'red', 'blue', 'yellow']),
-  word: PropTypes.oneOf[('four', 'five')]
+  word: PropTypes.oneOf(['four', 'five'])
 };
 
 StateIcon.defaultProps = {

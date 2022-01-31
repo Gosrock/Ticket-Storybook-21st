@@ -14,6 +14,6 @@ export const 예매티켓 = Template.bind({});
 예매티켓.args = {
   date1: '관람일시',
   date2: '예매일시',
-  performdate: '2022.03.03',
-  bookdate: '2022.02.14'
+  performdate: '22.03.03',
+  bookdate: '22.02.14'
 };
