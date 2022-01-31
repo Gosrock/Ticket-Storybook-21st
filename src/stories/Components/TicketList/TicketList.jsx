@@ -2,20 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './TicketList.css';
 import { ReactComponent as GosrockLogo } from './GosrockLogo.svg';
-import {
-  입금확인중,
-  입금확인,
-  미입금처리,
-  입장완료
-} from '../StateIcon/StateIcon.stories.jsx';
+import { StateIcon } from '../StateIcon/StateIcon.jsx';
 
-export const TicketList = ({ performdate, bookdate, ...props }) => {
+export const TicketList = ({ StateIcon, performdate, bookdate, ...props }) => {
   return (
     <>
       <button className={'TicketList'}>
-        <div className={'TicketList-ticketState'}>
-          <입금확인></입금확인>
-        </div>
+        <div className={'TicketList-ticketState'}>{StateIcon}</div>
         <div className={'TicketList-rec'}></div>
         <div className={'TicketList-info'}>
           <div>
@@ -41,7 +34,12 @@ TicketList.propTypes = {
   date2: PropTypes.string.isRequired,
   performdate: PropTypes.string.isRequired,
   bookdate: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  StateIcon: PropTypes.oneOfType([
+    PropTypes.shape({
+      type: PropTypes.oneOf([StateIcon])
+    })
+  ]).isRequired
 };
 
 TicketList.defaultProps = {
