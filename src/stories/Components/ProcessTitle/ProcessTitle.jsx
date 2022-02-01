@@ -13,7 +13,7 @@ export const ProcessTitle = ({
   ...props
 }) => {
   return (
-    <div {...props}>
+    <div className="ProcessTitle-wrapper" {...props}>
       <p
         className={`processTitle proccessTitle-align-${textAlign} processTitle-size-${textSize}`}
       >
