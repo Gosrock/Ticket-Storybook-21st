@@ -7,7 +7,7 @@ import './ProcessDescription.css';
  */
 export const ProcessDescription = ({ topLabel, bottomLabel, ...props }) => {
   return (
-    <div {...props}>
+    <div className="ProcessDescription-wrapper" {...props}>
       <p className={`ProcessDescription `}>{topLabel}</p>
       {bottomLabel && (
         <p className={`ProcessDescription proccessDescription-padding `}>

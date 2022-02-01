@@ -3,21 +3,9 @@ import PropTypes from 'prop-types';
 import { Timer } from './Indicator/Timer.jsx';
 import { Price } from './Indicator/Price.jsx';
 import { ValidationDesc } from './Desc/ValidationDesc.jsx';
-import { Desc } from './Desc/Desc.jsx';
 import './InputForm.css';
 
-export const InputForm = ({
-  page,
-  /*   type,
-  placeholder,
-  isValidate,
-  isTicketing,
-  limit, */
-  value,
-  onChange,
-  resend,
-  ticketCount
-}) => {
+export const InputForm = ({ page, value, onChange, resend, ticketCount }) => {
   const pageObj = {
     default: {
       type: 'string',
