@@ -23,7 +23,6 @@ ProcessDescription.propTypes = {
    * 위쪽의 텍스트를 변경할 수 있습니다.
    */
   topLabel: PropTypes.string.isRequired,
-
   /**
    * 아랫쪽의 텍스트를 변경할 수 있습니다. null 값으로 값을 안주셔도 됩니다.
    */
