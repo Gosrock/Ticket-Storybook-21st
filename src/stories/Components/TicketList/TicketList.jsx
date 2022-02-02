@@ -30,8 +30,6 @@ export const TicketList = ({ StateIcon, performdate, bookdate, ...props }) => {
 };
 
 TicketList.propTypes = {
-  date1: PropTypes.string.isRequired,
-  date2: PropTypes.string.isRequired,
   performdate: PropTypes.string.isRequired,
   bookdate: PropTypes.string.isRequired,
   onClick: PropTypes.func,
