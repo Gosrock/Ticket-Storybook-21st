@@ -7,7 +7,7 @@ import { StateIcon } from '../StateIcon/StateIcon.jsx';
 export const TicketList = ({ StateIcon, performdate, bookdate, ...props }) => {
   return (
     <>
-      <button className={'TicketList'}>
+      <button className={'TicketList-item'} {...props}>
         <div className={'TicketList-ticketState'}>{StateIcon}</div>
         <div className={'TicketList-rec'}></div>
         <div className={'TicketList-info'}>
