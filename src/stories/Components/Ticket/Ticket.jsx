@@ -63,7 +63,7 @@ export const Ticket = ({ date, place, payment, QRvalue }) => {
               {place}
             </span>
           </div>
-          <GosrockLogo className="ticket-logo" fill={'#b6b7b8'} />
+          <GosrockLogo className="ticket-logo" />
         </div>
       </div>
     </>
