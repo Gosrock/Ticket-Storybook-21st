@@ -19,6 +19,12 @@
   cursor: pointer;
 }
 
+.UtilityButton--logo {
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+}
+
 .UtilityButton--backgroundColor-white {
   background-color: white;
 }
