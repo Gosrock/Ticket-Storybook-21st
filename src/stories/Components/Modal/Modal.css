@@ -14,6 +14,12 @@
   margin: 24px 30px;
 }
 
+.modal--svg {
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+}
+
 .title {
   color: white;
   font-size: 18px;

@@ -125,6 +125,7 @@
 
 .ticket-logo {
   position: absolute;
+  z-index: 10;
   width: 49px;
   height: 49px;
   top: 53%;

@@ -11,6 +11,11 @@
   /* position: relative; */
   /* position: relative; */
 }
+.GoFrontButton--svg {
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+}
 
 .GoFrontButton--medium {
   font-size: 18px;
