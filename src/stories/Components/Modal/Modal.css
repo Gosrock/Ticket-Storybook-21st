@@ -1,6 +1,8 @@
 .modal-box {
-  height: 335px;
-  width: 335px;
+  height: 300px;
+  width: 88%;
+  min-width: 314px;
+  max-width: 335px;
   background-color: #262626;
   border-radius: 15px;
   display: grid;
@@ -17,7 +19,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 25px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .description {
@@ -49,4 +51,21 @@
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, 0);
+}
+
+.CloseButton {
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /* justify-content: center; */
+  align-items: center;
+  margin-left: auto;
+  display: flex;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: -2px;
+  /* position: relative; */
+  /* position: relative; */
 }

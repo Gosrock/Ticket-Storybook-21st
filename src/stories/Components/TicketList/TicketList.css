@@ -22,6 +22,7 @@
   left: calc(15% + 92px);
   display: grid;
   grid-template-rows: 21px 21px;
+  color: black;
 }
 
 .TicketList-rec {
