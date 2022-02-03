@@ -29,7 +29,11 @@ export const GoFrontButton = ({
         <span>{label}</span>
         <div
           style={{ marginLeft: '11px' }}
-          className={arrowCircleBackground ? 'GoFrontButton--circle' : ''}
+          className={
+            arrowCircleBackground
+              ? 'GoFrontButton--circle GoFrontButton--svg'
+              : 'GoFrontButton--svg'
+          }
         >
           <GoFrontArrow fill={arrowColor === 'gray' ? '#b6b7b8' : arrowColor} />
         </div>

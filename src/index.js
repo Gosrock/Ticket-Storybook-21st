@@ -20,6 +20,8 @@ import { UtilityButton } from './stories/Components/UtilityButton/UtilityButton.
 import { InputForm } from './stories/Components/InputForm/InputForm.jsx';
 import { Modal } from './stories/Components/Modal/Modal.jsx';
 import { Ticket } from './stories/Components/Ticket/Ticket.jsx';
+import { TicketList } from './stories/Components/TicketList/TicketList.jsx';
+import { StateIcon } from './stories/Components/StateIcon/StateIcon.jsx';
 
 // export
 export {
@@ -40,5 +42,7 @@ export {
   ProcessTitle,
   InputForm,
   Modal,
-  Ticket
+  Ticket,
+  TicketList,
+  StateIcon
 };

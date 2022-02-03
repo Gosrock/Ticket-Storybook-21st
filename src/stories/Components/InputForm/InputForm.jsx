@@ -1,40 +1,28 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Timer } from './Indicator/Timer.jsx';
 import { Price } from './Indicator/Price.jsx';
 import { ValidationDesc } from './Desc/ValidationDesc.jsx';
-import { Desc } from './Desc/Desc.jsx';
 import './InputForm.css';
 
-export const InputForm = ({
-  page,
-  /*   type,
-  placeholder,
-  isValidate,
-  isTicketing,
-  limit, */
-  value,
-  onChange,
-  resend,
-  ticketCount
-}) => {
+export const InputForm = ({ page, value, onChange, resend, ticketCount }) => {
   const pageObj = {
     default: {
       type: 'string',
       placeholder: 'placeholder 입력'
     },
     phone: {
-      type: 'number',
+      type: 'tel',
       placeholder: '휴대폰 번호 입력',
       limit: 11
     },
     validate: {
-      type: 'number',
+      type: 'tel',
       placeholder: '인증번호 입력',
       limit: 6
     },
     count: {
-      type: 'number',
+      type: 'tel',
       placeholder: '1',
       limit: 1
     },
@@ -55,7 +43,9 @@ export const InputForm = ({
   };
 
   useEffect(() => {
-    input.current.focus();
+    setTimeout(() => {
+      input.current.focus();
+    }, 300);
   }, []);
 
   return (
@@ -66,12 +56,12 @@ export const InputForm = ({
           type={selectPage.type}
           value={value}
           onChange={e => {
-            onChange();
+            onChange(e);
             handleValidateNumber(e, selectPage.limit);
-            if (page == 'count') {
+            if (page === 'count') {
               setcountInput(e.target.value);
             }
-            if (page == 'name') {
+            if (page === 'name') {
               const inputValue = e.target.value;
               if (inputValue.length > 4) {
                 e.target.value = inputValue.slice(0, -1);
@@ -87,13 +77,13 @@ export const InputForm = ({
           ref={input}
         />
         <div className="input-indicator">
-          {page == 'validate' && <Timer time={time} setTime={setTime} />}
-          {page == 'count' && <Price ticketCount={countInput} />}
-          {page == 'name' && <Price ticketCount={ticketCount} />}
+          {page === 'validate' && <Timer time={time} setTime={setTime} />}
+          {page === 'count' && <Price ticketCount={countInput} />}
+          {page === 'name' && <Price ticketCount={ticketCount} />}
         </div>
-        <div class="border-animate"></div>
+        <div className="border-animate"></div>
       </div>
-      {page == 'validate' && (
+      {page === 'validate' && (
         <ValidationDesc
           onClick={() => {
             resend();
@@ -102,10 +92,6 @@ export const InputForm = ({
           }}
         />
       )}
-      {page == 'count' && (
-        <Desc desc={'티켓은 한번에 9매까지 구매 가능합니다.'} />
-      )}
-      {page == 'name' && <Desc desc={'이름은 4자 이내로 입력해주세요.'} />}
     </>
   );
 };

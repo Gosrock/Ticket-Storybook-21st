@@ -2,8 +2,9 @@
   font-weight: 400;
   font-size: 18px;
   color: #b6b7b8;
+  line-height: 25px;
 }
 
-.ProcessDescription-padding {
-  padding-top: 0.3rem;
+.ProcessDescription-wrapper {
+  margin-top: 22px;
 }

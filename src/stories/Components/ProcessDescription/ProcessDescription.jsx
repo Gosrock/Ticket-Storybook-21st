@@ -7,10 +7,10 @@ import './ProcessDescription.css';
  */
 export const ProcessDescription = ({ topLabel, bottomLabel, ...props }) => {
   return (
-    <div {...props}>
+    <div className="ProcessDescription-wrapper" {...props}>
       <p className={`ProcessDescription `}>{topLabel}</p>
       {bottomLabel && (
-        <p className={`ProcessDescription proccessTitle-padding `}>
+        <p className={`ProcessDescription proccessDescription-padding `}>
           {bottomLabel}
         </p>
       )}
@@ -23,7 +23,6 @@ ProcessDescription.propTypes = {
    * 위쪽의 텍스트를 변경할 수 있습니다.
    */
   topLabel: PropTypes.string.isRequired,
-
   /**
    * 아랫쪽의 텍스트를 변경할 수 있습니다. null 값으로 값을 안주셔도 됩니다.
    */
