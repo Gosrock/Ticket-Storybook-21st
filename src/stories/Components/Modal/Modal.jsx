@@ -116,7 +116,7 @@ export const Modal = ({
             ) : (
               <button className="CloseButton" onClick={onClickClose}>
                 <span>닫기</span>
-                <div style={{ marginLeft: '11px' }}>
+                <div className="modal--svg" style={{ marginLeft: '11px' }}>
                   <Close />
                 </div>
               </button>
