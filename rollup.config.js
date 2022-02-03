@@ -37,7 +37,7 @@ const PLUGINS = [
   }),
   filesize(),
   url(),
-  svgr({ icon: false }),
+  svgr({ icon: false, dimensions: false }),
   image(),
   del({
     targets: 'dist/*.svg',
