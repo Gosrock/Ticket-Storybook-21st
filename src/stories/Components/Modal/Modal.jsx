@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Modal.css';
 import { GoFrontButton } from '../GoFrontButton/GoFrontButton.jsx';
+import { ReactComponent as Close } from './Close.svg';
 
 export const Modal = ({
   onClickPurchased,
   onClickKakao,
+  onClickClose,
   accountName,
-  accountNumber
+  accountNumber,
+  page
 }) => {
   let removeToast;
 
@@ -35,14 +38,25 @@ export const Modal = ({
     navigator.clipboard.writeText(value);
     toast();
   };
+
   return (
     <>
       <div className="modal-box">
         <div className="modal-container">
-          <p className="title">
-            이제 마지막이에요! <br />
-            입금을 완료한 후에 진행해 주세요.
-          </p>
+          <div className="title">
+            {page === 'ticketing' ? (
+              <p>
+                이제 마지막이에요! <br />
+                입금을 완료한 후에 진행해 주세요.
+              </p>
+            ) : (
+              <p>
+                입금계좌 보기
+                <br />
+                <br />
+              </p>
+            )}
+          </div>
           <div className="description">
             {accountName}
             <div>
@@ -67,13 +81,23 @@ export const Modal = ({
         </div>
         <div className="modal-bottom">
           <div className="modal-container">
-            <GoFrontButton
-              arrowCircleBackground={false}
-              arrowColor="yellow"
-              fontColor="gray"
-              label="또는, 카카오페이로 송금하기"
-              onClick={onClickKakao}
-            />
+            {page === 'ticketing' ? (
+              <GoFrontButton
+                arrowCircleBackground={false}
+                arrowColor="yellow"
+                fontColor="gray"
+                label="또는, 카카오페이로 송금하기"
+                onClick={onClickKakao}
+              />
+            ) : (
+              <GoFrontButton
+                arrowCircleBackground={false}
+                arrowColor="yellow"
+                fontColor="gray"
+                label="카카오페이로 송금하기"
+                onClick={onClickKakao}
+              />
+            )}
           </div>
           <div
             style={{
@@ -83,11 +107,20 @@ export const Modal = ({
             }}
           ></div>
           <div className="modal-container">
-            <GoFrontButton
-              arrowCircleBackground={false}
-              label="입금 완료"
-              onClick={onClickPurchased}
-            />
+            {page === 'ticketing' ? (
+              <GoFrontButton
+                arrowCircleBackground={false}
+                label="입금 완료"
+                onClick={onClickPurchased}
+              />
+            ) : (
+              <button className="CloseButton" onClick={onClickClose}>
+                <span>닫기</span>
+                <div style={{ marginLeft: '11px' }}>
+                  <Close />
+                </div>
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -106,16 +139,25 @@ Modal.propTypes = {
    */
   onClickKakao: PropTypes.func,
   /**
+   * 클릭 이벤트 콜백 함수
+   */
+  onClickClose: PropTypes.func,
+  /**
    * 계좌 이름 ex. 신한 (홍길동)
    */
   accountName: PropTypes.string,
   /**
    * 계좌 번호 /  (-)포함해서 받습니다.
    */
-  accountNumber: PropTypes.string
+  accountNumber: PropTypes.string,
+  /**
+   * 페이지 : (ticketing / list)
+   */
+  page: PropTypes.oneOf(['ticketing', 'list'])
 };
 
 Modal.defaultProps = {
   accountName: '신한 (홍길동)',
-  accountNumber: '110-234-567890'
+  accountNumber: '110-234-567890',
+  page: 'ticketing'
 };
