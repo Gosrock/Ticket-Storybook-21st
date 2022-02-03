@@ -12,3 +12,9 @@
   line-height: 22px;
   /* padding: 11px 20px; */
 }
+
+.goBackButton--svg {
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+}

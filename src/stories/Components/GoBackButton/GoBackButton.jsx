@@ -16,7 +16,7 @@ export const GoBackButton = ({ label, ...props }) => {
         className={['goBackButton', `goBackButton--medium`].join(' ')}
         {...props}
       >
-        <div style={{ marginRight: '13px' }}>
+        <div className={'goBackButton--svg'} style={{ marginRight: '13px' }}>
           <GoBackArrow />
         </div>
         {label}
