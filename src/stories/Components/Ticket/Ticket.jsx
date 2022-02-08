@@ -55,8 +55,8 @@ export const Ticket = ({ date, place, payment, QRvalue }) => {
             <span
               style={{
                 color: '#B6B7B8',
-                fontSize: '24px',
-                fontWeight: '4510',
+                fontSize: '22px',
+                fontWeight: '400',
                 lineHeight: '28.64px'
               }}
             >
@@ -82,7 +82,7 @@ Ticket.propTypes = {
 
 Ticket.defaultProps = {
   date: '22.03.10',
-  place: 'CLUB 001',
+  place: '라디오 가가',
   payment: false,
   QRvalue: 'https://github.com/Gosrock'
 };

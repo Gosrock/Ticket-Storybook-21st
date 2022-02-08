@@ -20,7 +20,7 @@ const Template = args => (
 export const 입금확인전티켓 = Template.bind({});
 입금확인전티켓.args = {
   date: '22.03.10',
-  place: 'CLUB 001',
+  place: '라디오 가가',
   payment: false,
   QRvalue: 'https://github.com/Gosrock'
 };
@@ -28,7 +28,7 @@ export const 입금확인전티켓 = Template.bind({});
 export const 입금확인후티켓 = Template.bind({});
 입금확인후티켓.args = {
   date: '22.03.10',
-  place: 'CLUB 001',
+  place: '라디오 가가',
   payment: true,
   QRvalue: 'https://github.com/Gosrock'
 };
