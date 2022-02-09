@@ -35,3 +35,8 @@ export const 입금자명 = Template.bind({});
 입금자명.args = {
   page: 'name'
 };
+
+export const 학번 = Template.bind({});
+학번.args = {
+  page: 'studentId'
+};
