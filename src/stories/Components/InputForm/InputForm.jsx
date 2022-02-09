@@ -30,6 +30,11 @@ export const InputForm = ({ page, value, onChange, resend, ticketCount }) => {
       type: 'string',
       placeholder: '입금자명',
       limit: 5
+    },
+    studentId: {
+      type: 'string',
+      placeholder: 'C2',
+      limit: 7
     }
   };
   const [time, setTime] = useState(180);
@@ -97,7 +102,14 @@ export const InputForm = ({ page, value, onChange, resend, ticketCount }) => {
 };
 
 InputForm.propTypes = {
-  page: PropTypes.oneOf(['default', 'phone', 'validate', 'count', 'name']),
+  page: PropTypes.oneOf([
+    'default',
+    'phone',
+    'validate',
+    'count',
+    'name',
+    'studentId'
+  ]),
   /*   type: PropTypes.oneOf(['text', 'number']).isRequired,
   placeholder: PropTypes.string.isRequired,
   isValidate: PropTypes.bool,
