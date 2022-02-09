@@ -24,6 +24,7 @@
   }
   .Ticket-Inner-Container {
     padding: 6%;
+    max-height: none;
   }
 }
 
