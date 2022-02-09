@@ -38,7 +38,7 @@
 
 #toast {
   position: fixed;
-  bottom: 30px;
+  bottom: 50px;
   left: 50%;
   padding: 15px 20px;
   transform: translate(-50%, 10px);
