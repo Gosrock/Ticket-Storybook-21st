@@ -33,8 +33,13 @@ export const InputForm = ({ page, value, onChange, resend, ticketCount }) => {
     },
     studentId: {
       type: 'string',
-      placeholder: 'C2',
+      placeholder: 'ex. C211000',
       limit: 7
+    },
+    newbie: {
+      type: 'string',
+      placeholder: '이름',
+      limit: 4
     }
   };
   const [time, setTime] = useState(180);
