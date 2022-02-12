@@ -33,7 +33,7 @@ export const InputForm = ({ page, value, onChange, resend, ticketCount }) => {
     },
     studentId: {
       type: 'string',
-      placeholder: 'C2',
+      placeholder: 'ex. C211000',
       limit: 7
     }
   };
