@@ -1,5 +1,5 @@
 .modal-box {
-  height: 300px;
+  height: 333px;
   width: 88%;
   min-width: 314px;
   max-width: 335px;
@@ -74,4 +74,53 @@
   margin-top: -2px;
   /* position: relative; */
   /* position: relative; */
+}
+
+.newbie-container {
+  height: 140px;
+  background-color: #121212;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.newbie-main-grid {
+  margin-left: 5%;
+  width: 70%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.newbie-left-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 84px;
+  width: 84px;
+  background-color: #bf94e4;
+  border-radius: 15px;
+}
+
+.newbie-right-container {
+  display: flex;
+  flex-direction: column;
+}
+.newbie-right-top {
+  font-size: 24px;
+  line-height: 24px;
+
+  font-weight: 500;
+  color: #b6b7b8;
+  text-decoration-color: #bf94e4;
+  text-decoration-line: line-through;
+}
+
+.newbie-right-bottom {
+  color: #bf94e4;
+  font-size: 55px;
+  line-height: 56px;
+  font-weight: 500;
 }
