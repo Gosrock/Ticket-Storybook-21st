@@ -7,7 +7,9 @@
   font-size: 14px;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 350px) {
@@ -18,9 +20,11 @@
 
 .TicketList-icon {
   position: absolute;
-  right: 5%;
-  width: 49px;
-  height: 49px;
+  width: 121px;
+  height: 121px;
+  opacity: 10%;
+  z-index: 1;
+  right: -4%;
 }
 
 .TicketList-info {
@@ -33,7 +37,7 @@
 
 .TicketList-rec {
   position: absolute;
-  left: calc(10% + 90px);
+  left: 50%;
   width: 2px;
   height: 49px;
   background: #c4c4c4;
@@ -42,4 +46,21 @@
 .TicketList-ticketState {
   position: absolute;
   left: 5%;
+}
+
+.TicketList-button-left {
+  width: calc(50% - 0.5px);
+  display: flex;
+  justify-content: left;
+}
+
+.TicketList-button-right {
+  width: calc(50% - 0.5px);
+  display: flex;
+  justify-content: right;
+}
+
+.TicketList-button-left:active,
+.TicketList-button-right:active {
+  transform: scale(1.02);
 }
