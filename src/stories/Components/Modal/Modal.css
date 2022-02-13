@@ -98,11 +98,9 @@
 }
 
 .newbie-main-grid {
-  margin-left: 4%;
-  width: 70%;
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 84px 84px;
 }
 
 .newbie-left-container {
@@ -119,6 +117,7 @@
 .newbie-right-container {
   display: flex;
   flex-direction: column;
+  text-align: right;
 }
 .newbie-right-top {
   font-size: 24px;

@@ -67,7 +67,10 @@
   position: absolute;
   height: 150%;
   width: 150%;
-  background-image: conic-gradient(#a7fddb 20deg, #66dc80 120deg);
+  background-image: conic-gradient(
+    var(--majorColor) 20deg,
+    var(--minorColor) 120deg
+  );
   border-radius: 12px;
   animation: rotate 2s infinite linear;
   z-index: 5;
