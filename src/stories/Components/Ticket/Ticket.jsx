@@ -4,8 +4,17 @@ import './Ticket.css';
 import { ReactComponent as GosrockLogo } from './GosrockLogo.svg';
 import { ReactComponent as TicketBackgroud } from './TicketBackground.svg';
 import QRCode from 'qrcode.react';
+import { useEffect } from 'react';
 
-export const Ticket = ({ date, place, payment, QRvalue }) => {
+export const Ticket = ({ date, place, payment, enter, QRvalue }) => {
+  if (enter) {
+    document.documentElement.style.setProperty('--majorColor', `#edc967`);
+    document.documentElement.style.setProperty('--minorColor', `#f7ef8a`);
+  } else {
+    document.documentElement.style.setProperty('--majorColor', `#a7fddb`);
+    document.documentElement.style.setProperty('--minorColor', `#66dc80`);
+  }
+
   return (
     <>
       <div className="ticket-background-wrapper">
@@ -77,6 +86,8 @@ Ticket.propTypes = {
 
   payment: PropTypes.bool,
 
+  enter: PropTypes.bool,
+
   QRvalue: PropTypes.string
 };
 
@@ -84,5 +95,6 @@ Ticket.defaultProps = {
   date: '22.03.10',
   place: '라디오 가가',
   payment: false,
+  enter: false,
   QRvalue: 'https://github.com/Gosrock'
 };
