@@ -32,3 +32,12 @@ export const 입금확인후티켓 = Template.bind({});
   payment: true,
   QRvalue: 'https://github.com/Gosrock'
 };
+
+export const 입장후티켓 = Template.bind({});
+입장후티켓.args = {
+  date: '22.03.10',
+  place: '라디오 가가',
+  payment: true,
+  enter: true,
+  QRvalue: 'https://github.com/Gosrock'
+};
