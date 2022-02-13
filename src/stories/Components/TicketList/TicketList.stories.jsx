@@ -14,8 +14,8 @@ export default {
   title: 'Components/TicketList',
   component: TicketList,
   argTypes: {
-    TopElement: {
-      control: false
+    /*     TopElement: {
+      control: falses
     },
     StateIcon: {
       options: Object.keys(StateIcons),
@@ -29,7 +29,7 @@ export default {
           입장완료: '입장완료'
         }
       }
-    }
+    } */
   }
 };
 
@@ -42,7 +42,7 @@ const Template = args => (
 export const 예매티켓 = Template.bind({});
 
 예매티켓.args = {
-  performdate: '22.03.10',
-  bookdate: '22.02.14',
-  StateIcon: <StateIcon />
+  //performdate: '22.03.10',
+  //bookdate: '22.02.14',
+  //StateIcon: <StateIcon />
 };
