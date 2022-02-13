@@ -1,4 +1,16 @@
 .modal-box {
+  height: 300px;
+  width: 88%;
+  min-width: 314px;
+  max-width: 335px;
+  background-color: #262626;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: auto 136px;
+  margin: auto;
+}
+
+.modal-box-newbie {
   height: 333px;
   width: 88%;
   min-width: 314px;
@@ -86,10 +98,10 @@
 }
 
 .newbie-main-grid {
-  margin-left: 5%;
+  margin-left: 4%;
   width: 70%;
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -120,7 +132,7 @@
 
 .newbie-right-bottom {
   color: #bf94e4;
-  font-size: 55px;
+  font-size: 54px;
   line-height: 56px;
   font-weight: 500;
 }

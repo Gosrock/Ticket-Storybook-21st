@@ -77,7 +77,7 @@ export const Modal = ({
 
   return (
     <>
-      <div className="modal-box">
+      <div className={page === 'newbie' ? 'modal-box-newbie' : 'modal-box'}>
         <div className="modal-container">
           <div className="title">{renderTitleSwitch(page)}</div>
           {page === 'newbie' ? (
@@ -136,14 +136,14 @@ export const Modal = ({
           )}
         </div>
         {page === 'newbie' ? (
-          <div
-            className="modal-bottom"
-            style={{
-              borderWidth: '1px',
-              borderBlockColor: '#363636',
-              borderTop: 'solid'
-            }}
-          >
+          <div className="modal-bottom">
+            <div
+              style={{
+                height: '1px',
+                width: '100%',
+                backgroundColor: '#363636'
+              }}
+            ></div>
             <div className="modal-container">
               <GoFrontButton
                 arrowCircleBackground={false}
