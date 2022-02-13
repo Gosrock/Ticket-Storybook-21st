@@ -21,11 +21,15 @@ export const TicketList = ({ onClickQR, ...props }) => {
           }}
         >
           <Car />
-          <div style={{ fontWeight: '700', marginLeft: '13px' }}>오시는 길</div>
+          <div style={{ fontWeight: '700', marginLeft: '13px', Color: '#000' }}>
+            오시는 길
+          </div>
         </div>
         <div className={'TicketList-rec'}></div>
         <div className="TicketList-button-right" onClick={onClickQR}>
-          <div style={{ fontWeight: '700', marginRight: '13px' }}>
+          <div
+            style={{ fontWeight: '700', marginRight: '13px', color: '#000' }}
+          >
             QR코드 보기
           </div>
           <QR />
