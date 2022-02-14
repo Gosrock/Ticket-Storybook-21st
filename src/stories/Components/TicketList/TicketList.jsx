@@ -21,7 +21,7 @@ export const TicketList = ({ onClickQR, ...props }) => {
           }}
         >
           <Car />
-          <div style={{ fontWeight: '700', marginLeft: '13px', Color: '#000' }}>
+          <div style={{ fontWeight: '700', marginLeft: '13px', color: '#000' }}>
             오시는 길
           </div>
         </div>
