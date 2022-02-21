@@ -34,7 +34,7 @@ export const Modal = ({
 
   const copyNumber = () => {
     const value = accountNumber.replace(/\-/g, ''); //특정문자(-) 제거
-    console.log(value);
+    //console.log(value);
     navigator.clipboard.writeText(value);
     toast();
   };
