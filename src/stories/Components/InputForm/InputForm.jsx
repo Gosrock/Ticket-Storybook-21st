@@ -39,7 +39,7 @@ export const InputForm = ({ page, value, onChange, resend, ticketCount }) => {
     newbie: {
       type: 'string',
       placeholder: '이름',
-      limit: 4
+      limit: 5
     }
   };
   const [time, setTime] = useState(180);
