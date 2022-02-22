@@ -88,7 +88,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: white;
   border-radius: 8px;
   width: 194px;
   height: 194px;
@@ -99,7 +99,7 @@
   position: absolute;
   width: 204px;
   height: 204px;
-  background-color: black;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
