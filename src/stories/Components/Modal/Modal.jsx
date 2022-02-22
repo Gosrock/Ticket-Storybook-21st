@@ -34,7 +34,7 @@ export const Modal = ({
 
   const copyNumber = () => {
     const value = accountNumber.replace(/\-/g, ''); //특정문자(-) 제거
-    console.log(value);
+    //console.log(value);
     navigator.clipboard.writeText(value);
     toast();
   };
@@ -185,7 +185,7 @@ export const Modal = ({
                 {page === 'ticketing' ? (
                   <GoFrontButton
                     arrowCircleBackground={false}
-                    label="입금 완료"
+                    label="네, 입금했어요!"
                     onClick={onClickPurchased}
                   />
                 ) : (

@@ -2,25 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './TicketList.css';
 import { ReactComponent as GosrockLogo } from './GosrockLogo.svg';
-import { StateIcon } from '../StateIcon/StateIcon.jsx';
+import { ReactComponent as Car } from './Car.svg';
+import { ReactComponent as QR } from './QR.svg';
+//import { StateIcon } from '../StateIcon/StateIcon.jsx';
 
-export const TicketList = ({ StateIcon, performdate, bookdate, ...props }) => {
+export const TicketList = ({ onClickQR, ...props }) => {
   return (
     <>
       <button className={'TicketList-item'} {...props}>
-        <div className={'TicketList-ticketState'}>{StateIcon}</div>
+        <div
+          className="TicketList-button-left"
+          onClick={() => {
+            window.open(
+              'https://m.place.naver.com/place/36995079/home?entry=ple',
+              '',
+              '_blank'
+            );
+          }}
+        >
+          <Car />
+          <div style={{ fontWeight: '700', marginLeft: '13px', color: '#000' }}>
+            오시는 길
+          </div>
+        </div>
         <div className={'TicketList-rec'}></div>
-        <div className={'TicketList-info'}>
-          <div>
-            <p>
-              <span style={{ fontWeight: '700' }}>공연일</span> {performdate}
-            </p>
+        <div className="TicketList-button-right" onClick={onClickQR}>
+          <div
+            style={{ fontWeight: '700', marginRight: '13px', color: '#000' }}
+          >
+            QR코드 보기
           </div>
-          <div>
-            <p>
-              <span style={{ fontWeight: '700' }}>예매일</span> {bookdate}
-            </p>
-          </div>
+          <QR />
         </div>
 
         <GosrockLogo className={'TicketList-icon'} />
@@ -29,7 +41,7 @@ export const TicketList = ({ StateIcon, performdate, bookdate, ...props }) => {
   );
 };
 
-TicketList.propTypes = {
+/* TicketList.propTypes = {
   performdate: PropTypes.string.isRequired,
   bookdate: PropTypes.string.isRequired,
   onClick: PropTypes.func,
@@ -38,10 +50,12 @@ TicketList.propTypes = {
       type: PropTypes.oneOf([StateIcon])
     })
   ]).isRequired
+}; */
+
+TicketList.propTypes = {
+  onClickQR: PropTypes.func
 };
 
 TicketList.defaultProps = {
-  onClick: undefined,
-  performdate: '공연일',
-  bookdate: '예매일'
+  onClickQR: undefined
 };

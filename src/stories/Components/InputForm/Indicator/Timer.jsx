@@ -16,7 +16,7 @@ export const Timer = ({ time, setTime }) => {
   useEffect(() => {
     const tick = () => {
       savedCallback.current();
-      console.log('tick');
+      //console.log('tick');
     };
     let timer;
     if (isRunning) {
