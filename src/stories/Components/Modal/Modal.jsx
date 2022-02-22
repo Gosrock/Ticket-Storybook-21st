@@ -185,7 +185,7 @@ export const Modal = ({
                 {page === 'ticketing' ? (
                   <GoFrontButton
                     arrowCircleBackground={false}
-                    label="입금 완료"
+                    label="네, 입금했어요!"
                     onClick={onClickPurchased}
                   />
                 ) : (
